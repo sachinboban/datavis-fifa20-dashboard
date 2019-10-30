@@ -6,14 +6,14 @@
 * [FIFA Index Site][fifa-idx]
 
 ## Team
-* Lakshmi Narayanan Ramasamy
-  UID: u1201500
+* Lakshmi Narayanan Ramasamy<br>
+  UID: u1201500<br>
   Email: [lakshminarayanan.ramasamy@utah.edu](mailto:lakshminarayanan.ramasamy@utah.edu)
-* Rohit Singh
-  UID: u1210167
+* Rohit Singh<br>
+  UID: u1210167<br>
   Email: [singh.rohit@utah.edu](mailto:singh.rohit@utah.edu)
-* Sachin Boban
-  UID: u1210407
+* Sachin Boban<br>
+  UID: u1210407<br>
   Email: [sachin.boban@utah.edu](mailto:sachin.boban@utah.edu)
 
 ## Objective
