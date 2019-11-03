@@ -1,0 +1,25 @@
+<div class="responsive-table table-rounded">
+	<table class="table table-striped table-teams">
+		<thead>
+			<tr>
+				<th class="logo"></th>
+				<th class="name">Name</th>
+				<th class="league">League</th>
+				<th class="teamrating"><a href="https://www.fifaindex.com/teams/?order_by=attackrating&amp;order=0">ATT</a></th>
+				<th class="teamrating"><a href="https://www.fifaindex.com/teams/?order_by=midfieldrating&amp;order=0">MID</a></th>
+				<th class="teamrating"><a href="https://www.fifaindex.com/teams/?order_by=defenserating&amp;order=0">DEF</a></th>
+				<th class="teamrating"><a href="https://www.fifaindex.com/teams/?order_by=overallrating&amp;order=0">OVR</a></th>
+				<th class="starrating">Team Rating</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td><a href="https://www.fifaindex.com/team/241/fc-barcelona/" title="FC Barcelona FIFA 20" class="link-team"><img src="./Team Stats Database - FIFA 20 - FIFA Index_files/241.webp" data-src="/static/FIFA20/images/crest/5/light/241.png" data-srcset="/static/FIFA20/images/crest/5/light/241@2x.png 2x, /static/FIFA20/images/crest/5/light/241@3x.png 3x" alt="FC Barcelona FIFA 20" title="FC Barcelona FIFA 20" class="team size-5" srcset="/static/FIFA20/images/crest/5/light/241@2x.webp 2x, /static/FIFA20/images/crest/5/light/241@3x.webp 3x" data-loaded="true"></a></td>
+			<td data-title="Name"><a href="https://www.fifaindex.com/team/241/fc-barcelona/" title="FC Barcelona FIFA 20" class="link-team">FC Barcelona</a></td>
+			<td data-title="League"><a href="https://www.fifaindex.com/teams/?league=53" title="LaLiga Santander" class="link-league">LaLiga Santander</a></td>
+			<td data-title="ATT"><span class="badge badge-dark rating r1">90</span></td>
+			<td data-title="MID"><span class="badge badge-dark rating r2">85</span></td>
+			<td data-title="DEF"><span class="badge badge-dark rating r2">85</span></td>
+			<td data-title="OVR"><span class="badge badge-dark rating r2">86</span></td>
+			<td data-title="Team Rating"><span class="star"><i class="fas fa-star fa-lg"></i><i class="fas fa-star fa-lg"></i><i class="fas fa-star fa-lg"></i><i class="fas fa-star fa-lg"></i><i class="fas fa-star fa-lg"></i></span></td>
+			</tr>
