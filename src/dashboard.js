@@ -1,17 +1,46 @@
 import React from 'react';
-import Table from './table';
+import PlayerTable from './table';
 import PlayerCard from './playerCard';
-import {MDBContainer,MDBRow,MDBCol} from "mdbreact";
+import {Container, Row, Col} from 'react-bootstrap';
+import * as d3 from 'd3';
+import data from './data/raw.csv';
 
 class Dashboard extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            playerData: [],
+            selectedPlayer: undefined
+        }
+    }
+
+    componentDidMount() {
+        d3.csv(data).then((data) => {
+            // data.forEach((player,index) => player.id = index);
+            this.setState({
+                playerData: data,
+                selectedPlayer: undefined
+            });
+        }).catch(function (err) {
+            console.log("Error loading player data");
+        });
+    }
+
+    onSelectionChange = (selectedPlayer) => {
+        this.setState({
+            playerData: this.state.playerData,
+            selectedPlayer: selectedPlayer
+        });
+    };
+
     render(){
         return (
-            <MDBContainer fluid>
-                <MDBRow>
-                    <MDBCol size="8"><Table/> </MDBCol>
-                    <MDBCol size="4"> <PlayerCard/> </MDBCol>
-                </MDBRow>
-            </MDBContainer>
+            <Container fluid>
+                <Row>
+                    <Col sm="8"><PlayerTable data={this.state.playerData} onSelectionChange={this.onSelectionChange}/> </Col>
+                    <Col sm="4"><PlayerCard player={this.state.selectedPlayer}/></Col>
+                </Row>
+            </Container>
         );
     }
 }

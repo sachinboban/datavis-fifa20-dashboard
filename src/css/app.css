@@ -1,11 +1,30 @@
 body{
-  background-color: #eee !important;
+  background-color: #e5e5e5 !important;
 }
 
 .container-fluid{
-   margin-top:70px;
+   margin-top:50px;
 }
 
 .navbar{
     box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    background-color: #1976d2;
+}
+
+.MuiPaper-root{
+    padding: 15px 15px;
+}
+
+.MuiCardMedia-root.image{
+    width:50px;
+    height:50px;
+}
+
+.MuiAvatar-root.MuiAvatar-circle{
+    width: 60px;
+    height:60px;
+}
+
+.MuiCardContent-root span{
+    margin-left:20px;
 }

@@ -1,23 +1,19 @@
 import React from 'react';
-import {MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText} from "mdbreact";
+import {Container, Row, Col} from 'react-bootstrap';
+import {Paper} from '@material-ui/core';
 
 class Story extends React.Component {
     render() {
         return (
-            <MDBContainer fluid>
-                <MDBRow>
-                    <MDBCol>
-                        <MDBCard>
-                            <MDBCardBody>
-                                <MDBCardTitle>Story</MDBCardTitle>
-                                <MDBCardText>
-                                    Story goes here
-                                </MDBCardText>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <Paper>
+                            Story goes here
+                        </Paper>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

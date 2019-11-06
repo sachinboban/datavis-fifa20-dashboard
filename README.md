@@ -23,9 +23,9 @@ Start the node server using
 ```bash
 npm start
 ```
-Navigate to [localhost:3000] on your browser to view the app.
+Navigate to [localhost:3000/][localhost] on your browser to view the app.
 
 [doc-prop]: docs/proposal.md
-[raw-data]: data/raw.csv
+[raw-data]: src/data/raw.csv
 [data-src]: https://www.kaggle.com/sagunsh/fifa-20-complete-player-dataset
-[localhost:3000]: localhost:3000/
+[localhost]: localhost:3000/

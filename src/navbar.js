@@ -1,17 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import {NavLink} from 'react-router-dom';
 import {Navbar as BootstrapNav, Nav} from 'react-bootstrap';
 
-
-class Navbar extends Component {
-    state = {
-        isOpen: false,
-    };
-
-
-    render() {
+function Navbar() {
         return (
-            <BootstrapNav variant="dark" className="indigo">
+            <BootstrapNav variant="dark" className="indigo" expand="lg">
                 <BootstrapNav.Brand href="/home">FIFA 20 Dashboard</BootstrapNav.Brand>
                 <Nav className="mr-auto">
                     <NavLink to="/home" className="nav-link">Home</NavLink>
@@ -19,7 +12,6 @@ class Navbar extends Component {
                 </Nav>
             </BootstrapNav>
         );
-    }
 }
 
 export default Navbar;
