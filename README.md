@@ -4,9 +4,8 @@ A visualization project on FIFA20 player ratings.
 
 ## Documentation
 * [Project Proposal][doc-prop]
-
-## Data
-* [Raw Data][raw-data] as obtained from [Kaggle][data-src]
+* [Process Book][doc-proc-bk]
+* [Peer Review Feedback][doc-peer]
 
 ## Installation
 
@@ -26,6 +25,8 @@ npm start
 Navigate to [localhost:3000/][localhost] on your browser to view the app.
 
 [doc-prop]: docs/proposal.md
+[doc-proc-bk]: docs/process_book.md
+[doc-peer]: docs/peer_feedback.md
 [raw-data]: src/data/raw.csv
 [data-src]: https://www.kaggle.com/sagunsh/fifa-20-complete-player-dataset
 [localhost]: localhost:3000/
