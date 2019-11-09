@@ -1,6 +1,6 @@
 # Peer Review Feedback
 
-## Feeback from Braeden
+## Feedback from Braeden
 1. **Interaction with spider plot**: *Rather than having a spider plot with
    fixed attributes to compare any two players, it would be better to have an
    interaction.* This is indeed a valuable feedback. Having a fixed set of
