@@ -41,7 +41,7 @@ packet manager for `Node.js` packages or modules.
 [www.npmjs.com](www.npmjs.com) hosts thousands of free packages to download and
 use.
 
-### Installation (Linux/MacOS)
+### Installation
 Clone the [repo][src-code] and install dependencies using the following
 commands:
 ```sh
