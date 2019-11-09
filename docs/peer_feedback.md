@@ -15,7 +15,7 @@
    This would give the user a fair idea about how better the player is w.r.t.
    to each skill among all the players in our dataset.
 
-3. **Add Seach option**: This idea has been further extended to have a search
+3. **Add Search option**: This idea has been further extended to have a search
    (filter) option for each of the attributes in the player list. Not only
    can a player search for a player, he can filter/search within any of the
    attributes in our list.
