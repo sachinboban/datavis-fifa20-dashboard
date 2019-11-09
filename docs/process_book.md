@@ -141,6 +141,9 @@ highest rating/attribute.
 Player comparision begins with a default set of attributes. User can change
 any of the selected attributes as to compare skills that interests him/her.
 
+A screenshot of the current prototype can be seen below:
+![Screenshot v0.1](images/screenshot_v0.1.png)
+
 ### Wage-Age-Rating Distribution
 ![Distribution Ideas](images/wage_dist_idea.png)
 
