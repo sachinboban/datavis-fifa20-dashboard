@@ -21,7 +21,7 @@ Each of these perspectives require different visualizations as to effectively
 convey the information. The objective is to identify the most effective
 visualization for each of these perspectives.
 
-## Sources Code
+## Source Code
 All the code for this project can be found on [GitHub][src-code].
 
 ## Team
