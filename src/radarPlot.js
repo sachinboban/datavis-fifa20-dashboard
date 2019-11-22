@@ -10,7 +10,7 @@ class RadarPlot extends Component {
       plot_points: {}
     };
     this.gk_skills = [
-      "Goalkeeping",
+      "Reactions",
       "GK Diving",
       "GK Handling",
       "GK Kicking",
@@ -23,7 +23,7 @@ class RadarPlot extends Component {
       "Standing Tackle",
       "Sliding Tackle",
       "Strength",
-      "Jumpimg"
+      "Jumping"
     ];
     this.mid_skills = [
       "Short Passing",
@@ -69,6 +69,9 @@ class RadarPlot extends Component {
   componentDidMount() {}
 
   componentDidUpdate(prevProps, prevState) {
+    if (this.props.player1 == undefined) {
+      return;
+    }
     let curr_plot_points = this.state.plot_points;
 
     if (prevProps.player1 !== this.props.player1) {
@@ -130,6 +133,7 @@ class RadarPlot extends Component {
     }
   }
   render() {
+    console.log(this.state);
     return <div>{this.displayRadarPlot()}</div>;
   }
 
