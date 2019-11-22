@@ -1,6 +1,6 @@
-import React from 'react';
-import Col from 'react-bootstrap/Col';
-import {Paper} from "@material-ui/core";
+import React from "react";
+import Col from "react-bootstrap/Col";
+import { Paper } from "@material-ui/core";
 import {
     Grid,
     VirtualTable,
@@ -58,8 +58,22 @@ class PlayerTable extends React.Component {
         });
         this.props.onSelectionChange(this.state.rows[selection[selection.length - 1]]);
     };
+  }
 
-
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.data !== this.props.data) {
+      console.log(this.props.data);
+      let rows = this.props.data.slice();
+      let columns = this.columnHeaders.map(col => {
+        return { name: col, title: col };
+      });
+      this.setState({
+        rows: rows,
+        columns: columns,
+        selection: []
+      });
+    }
+  }
     render() {
         return (
             <Col>

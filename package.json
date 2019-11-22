@@ -12,6 +12,7 @@
     "d3": "^5.12.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
+    "react-d3-radar": "^1.0.0-rc6",
     "react-dom": "^16.11.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
