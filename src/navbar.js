@@ -1,17 +1,109 @@
-import React from "react";
-import {NavLink} from 'react-router-dom';
-import {Navbar as BootstrapNav, Nav} from 'react-bootstrap';
+import React from 'react';
+import PropTypes from 'prop-types';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Dashboard from "./dashboard";
+import Story from "./story";
+import {Row, Col} from 'react-bootstrap';
+import fifaLogo from './img/fifa-logo.png';
+import SwipeableViews from 'react-swipeable-views';
+
+function TabPanel(props) {
+    const {children, value, index, ...other} = props;
+
+    return (
+        <Typography
+            component="div"
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            <Box p={2}>{children}</Box>
+        </Typography>
+    );
+}
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+};
+
+function tabProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+    },
+    title: {
+        flexGrow: 1,
+        // padding: 10,
+        display: 'inline-block'
+    },
+    bigAvatar: {
+        margin: 10,
+        width: 60,
+        height: 60,
+        display: 'inline-block'
+    },
+}));
 
 function Navbar() {
-        return (
-            <BootstrapNav variant="dark" className="indigo" expand="lg">
-                <BootstrapNav.Brand href="/home">FIFA 20 Dashboard</BootstrapNav.Brand>
-                <Nav className="mr-auto">
-                    <NavLink to="/home" className="nav-link">Home</NavLink>
-                    <NavLink to="/story" className="nav-link">Story</NavLink>
-                </Nav>
-            </BootstrapNav>
-        );
+
+    const classes = useStyles();
+    const theme = useTheme();
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    const handleChangeIndex = index => {
+        setValue(index);
+    };
+    return (
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Row>
+                        <Col sm="3">
+                            <img alt="" width="100px" src={fifaLogo}/>
+                        </Col>
+                        <Col sm="9">
+                            <Tabs value={value} onChange={handleChange}>
+                                <Tab label="Dashboard" {...tabProps(0)} />
+                                <Tab label="Story" {...tabProps(1)} />
+                            </Tabs>
+                        </Col>
+                    </Row>
+                </Toolbar>
+            </AppBar>
+            <SwipeableViews
+                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={value}
+                onChangeIndex={handleChangeIndex}
+            >
+                <TabPanel value={value} index={0}>
+                    <Dashboard/>
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <Story/>
+                </TabPanel>
+            </SwipeableViews>
+        </div>
+    );
 }
 
 export default Navbar;

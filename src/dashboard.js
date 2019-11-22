@@ -2,8 +2,9 @@ import React from 'react';
 import PlayerTable from './table';
 import PlayerCard from './playerCard';
 import {Container, Row, Col} from 'react-bootstrap';
-import * as d3 from 'd3';
-import data from './data/raw.csv';
+import * as d3 from "d3";
+import data from "./data/raw.csv";
+import leagueData from "./data/team-league.csv";
 
 class Dashboard extends React.Component{
     constructor(props){
@@ -17,9 +18,17 @@ class Dashboard extends React.Component{
     componentDidMount() {
         d3.csv(data).then((data) => {
             // data.forEach((player,index) => player.id = index);
-            this.setState({
-                playerData: data,
-                selectedPlayer: undefined
+            d3.csv(leagueData).then((leagueData) =>{
+                let clubToLeagueMap = {};
+                leagueData.forEach((row) => {
+                    clubToLeagueMap[row['Name']] = row['League']
+                });
+
+                data.forEach((player) => player.League = clubToLeagueMap[player['Club']] ? clubToLeagueMap[player['Club']] : "");
+                this.setState({
+                    playerData: data,
+                    selectedPlayer: undefined
+                });
             });
         }).catch(function (err) {
             console.log("Error loading player data");

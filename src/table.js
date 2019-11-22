@@ -6,20 +6,29 @@ import {
     VirtualTable,
     TableHeaderRow,
     TableFilterRow,
-    TableSelection
+    TableSelection,
+    TableGroupRow,
+    GroupingPanel,
+    DragDropProvider,
+    Toolbar,
 } from "@devexpress/dx-react-grid-material-ui";
 import {
     FilteringState,
     SortingState,
     IntegratedFiltering,
     IntegratedSorting,
-    SelectionState
+    SelectionState,
+    GroupingState,
+    IntegratedGrouping,
 } from '@devexpress/dx-react-grid';
 
 class PlayerTable extends React.Component {
     constructor(props) {
         super(props);
-        this.columnHeaders = ["Name", "Country", "Club", "Age", "Position", "Overall", "Potential"];
+        this.columnHeaders = ["Name", "Country", "Club", "League", "Position", "Overall"];
+        this.columnWidths = [{ columnName: "Name", width: 200},{ columnName: "Country", width: 100},{ columnName: "Club", width: 150},
+            { columnName: "League", width: 150}, { columnName: "Position", width: 100}, { columnName: "Overall", width: 100}
+        ];
         this.state = {
             rows: [],
             columns: [],
@@ -47,7 +56,7 @@ class PlayerTable extends React.Component {
             columns: this.state.columns,
             selection: selection
         });
-        this.props.onSelectionChange(this.state.rows[selection[selection.length-1]]);
+        this.props.onSelectionChange(this.state.rows[selection[selection.length - 1]]);
     };
 
 
@@ -59,20 +68,27 @@ class PlayerTable extends React.Component {
                         rows={this.state.rows}
                         columns={this.state.columns}
                     >
-
                         <SortingState
                             defaultSorting={[{columnName: 'Name', direction: 'asc'}]}
                         />
                         <IntegratedSorting/>
+
+                        <DragDropProvider/>
+                        <GroupingState
+                            defaultGrouping={[]}/>
+                        <IntegratedGrouping/>
                         <FilteringState defaultFilters={[]}/>
                         <IntegratedFiltering/>
                         <SelectionState
                             selection={this.state.selection}
                             onSelectionChange={this.onSelectionChange}
                         />
-                        <VirtualTable/>
+                        <VirtualTable  columnExtensions={this.columnWidths}/>
                         <TableHeaderRow showSortingControls/>
                         <TableSelection selectByRowClick highlightRow/>
+                        <TableGroupRow/>
+                        <Toolbar/>
+                        <GroupingPanel showGroupingControls showSortingControls/>
                         <TableFilterRow/>
                     </Grid>
                 </Paper>

@@ -3,12 +3,19 @@ body{
 }
 
 .container-fluid{
-   margin-top:50px;
+   margin-top:30px;
+}
+.MuiAppBar-root{
+    padding: inherit !important;
 }
 
-.navbar{
+.MuiAppBar-colorPrimary{
     box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12) !important;
-    background-color: #1976d2;
+    background-color: #1976d2 !important;
+}
+
+button:focus{
+    outline: none !important;
 }
 
 .MuiPaper-root{
@@ -27,4 +34,12 @@ body{
 
 .MuiCardContent-root span{
     margin-left:20px;
+}
+
+.MuiTabs-fixed{
+    padding-top: 10px;
+}
+
+.MuiTab-textColorInherit.Mui-selected {
+    font-weight: bolder;
 }
