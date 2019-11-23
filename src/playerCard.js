@@ -19,7 +19,43 @@ class PlayerCard extends React.Component {
         }
     }
 
-    render() {
+    isSelectionEmpty = () => {
+        return this.state.player === undefined;
+    };
+
+    renderHelpInfo = () => {
+        return (
+            <Col>
+                <Card>
+                    <Grid container justify="center" alignItems="center">
+                        <CardHeader align="center"
+                                    title="Welcome to FIFA 20 Dashboard!">
+                        </CardHeader>
+                    </Grid>
+                    <Grid>
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="span">
+                                <h5>Player Information</h5>
+                                <ul>
+                                    <li>To see details of a player, click on any of the players on the left.</li>
+                                    <li>Select any two players to compare them</li>
+                                </ul>
+
+                                <h5>Table Manipulation</h5>
+                                <ul>
+                                    <li>Click on the arrow next to column headers to sort the table in ascending/
+                                        descending order.
+                                    </li>
+                                </ul>
+                            </Typography>
+                        </CardContent>
+                    </Grid>
+                </Card>
+            </Col>
+        );
+    };
+
+    renderPlayer = () => {
         return (
             <Col>
                 <Card>
@@ -50,6 +86,14 @@ class PlayerCard extends React.Component {
                 </Card>
             </Col>
         );
+    };
+
+    render() {
+        if (this.isSelectionEmpty()) {
+            return this.renderHelpInfo();
+        } else {
+            return this.renderPlayer();
+        }
     }
 }
 
