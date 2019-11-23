@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Radar from "react-d3-radar";
+import RadarChart from "react-svg-radar-chart";
+//import "react-svg-radar-chart/build/css/index.css";
+import "./css/radar.css";
 
 class RadarPlot extends Component {
   constructor(props) {
@@ -7,8 +9,11 @@ class RadarPlot extends Component {
     this.state = {
       player1: undefined,
       player2: undefined,
-      plot_points: {}
+      data: [],
+      captions: {},
+      dot: {}
     };
+    this.mousePos = [0, 0];
     this.gk_skills = [
       "Reactions",
       "GK Diving",
@@ -18,12 +23,12 @@ class RadarPlot extends Component {
       "GK Reflexes"
     ];
     this.def_skills = [
-      "Interceptions",
-      "Marking",
       "Standing Tackle",
+      "Jumping",
+      "Marking",
       "Sliding Tackle",
       "Strength",
-      "Jumping"
+      "Interceptions"
     ];
     this.mid_skills = [
       "Short Passing",
@@ -66,102 +71,147 @@ class RadarPlot extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    document.addEventListener("mousemove", this.handleMouseMove);
+  }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.player1 == undefined) {
-      return;
-    }
-    let curr_plot_points = this.state.plot_points;
+    let curr_data = this.state.data;
 
     if (prevProps.player1 !== this.props.player1) {
+      if (this.props.player1 === undefined) {
+        this.setState({
+          player1: undefined,
+          player2: undefined,
+          captions: {},
+          data: []
+        });
+        return;
+      }
+
       //select attributes by position of player1
       const attr = this.skills[this.position[this.props.player1.BP]];
 
       //populate attribute names
-      const attr_names = attr.map(d => {
-        return { key: "point" + attr.indexOf(d), label: d };
+      let attr_names = {};
+      attr.map(d => {
+        attr_names["point" + attr.indexOf(d)] = d;
       });
 
       //populate attribute values for player 1
       let attr_values1 = {};
       attr.map(d => {
-        attr_values1["point" + attr.indexOf(d)] = this.props.player1[d];
+        attr_values1["point" + attr.indexOf(d)] =
+          parseInt(this.props.player1[d]) / 100;
       });
 
       //populate attribute values for player 2
       let attr_values2 = {};
       attr.map(d => {
-        attr_values2["point" + attr.indexOf(d)] = this.props.player2[d];
+        attr_values2["point" + attr.indexOf(d)] =
+          parseInt(this.props.player2[d]) / 100;
       });
 
-      curr_plot_points = {
-        variables: attr_names,
-        sets: [
-          { key: "player1", label: "Player1 Attributes", values: attr_values1 },
-          { key: "player2", label: "Player2 Attributes", values: attr_values2 }
-        ]
-      };
+      curr_data = [
+        { data: attr_values1, meta: { color: "red" } },
+        { data: attr_values2, meta: { color: "green" } }
+      ];
 
       this.setState({
         player1: this.props.player1,
-        plot_points: curr_plot_points
+        player2: this.props.player2,
+        data: curr_data,
+        captions: attr_names
       });
     }
 
     if (prevProps.player2 !== this.props.player2) {
-      if (prevProps.player1 == this.props.player1) {
-        const attr = curr_plot_points.variables.map(d => {
-          return d.label;
+      if (prevProps.player1 === this.props.player1) {
+        if (this.props.player1 === undefined) {
+          this.setState({
+            player1: undefined,
+            player2: undefined,
+            captions: {},
+            data: []
+          });
+          return;
+        }
+        //select attributes by position of player1
+        const attr = this.skills[this.position[this.props.player1.BP]];
+
+        //populate attribute names
+        let attr_names = {};
+        attr.map(d => {
+          attr_names["point" + attr.indexOf(d)] = d;
         });
 
         //populate attribute values for player 2
         let attr_values2 = {};
         attr.map(d => {
-          attr_values2["point" + attr.indexOf(d)] = this.props.player2[d];
+          attr_values2["point" + attr.indexOf(d)] =
+            parseInt(this.props.player2[d]) / 100;
         });
 
-        curr_plot_points.sets[1].values = attr_values2;
+        curr_data[1] = { data: attr_values2, meta: { color: "green" } };
+
         this.setState({
-          plot_points: curr_plot_points
+          player2: this.props.player2,
+          data: curr_data
         });
       }
-
-      this.setState({
-        player2: this.props.player2
-      });
     }
   }
-  render() {
-    return <div>{this.displayRadarPlot()}</div>;
-  }
 
-  getPlayer = playerNo => {
-    if (playerNo == 1) {
-      return this.props.player1 === undefined ? " " : this.props.player1.Name;
-    } else if (playerNo == 2) {
-      return this.props.player2 === undefined ? " " : this.props.player2.Name;
-    }
+  //Tooltip
+  //positioning the tooltip
+  handleMouseMove = e => {
+    this.mousePos = [e.pageX, e.pageY];
   };
 
-  displayRadarPlot = () => {
-    if (this.state.player1 != undefined) {
+  handleToolTip = dot => {
+    this.setState({ dot });
+  };
+
+  //render state to Page
+  render() {
+    const dot = this.state.dot;
+    return <div>{this.displayRadarPlot(dot)}</div>;
+  }
+
+  displayRadarPlot = dot => {
+    console.log(dot);
+    if (this.state.player1 !== undefined) {
       return (
-        <Radar
-          width={500}
-          height={500}
-          padding={70}
-          domainMax={100}
-          highlighted={null}
-          onHover={point => {
-            if (point) {
-              console.log("hovered over a data point");
-            } else {
-              console.log("not over anything");
-            }
-          }}
-          data={this.state.plot_points}
-        />
+        <div>
+          <RadarChart
+            captions={this.state.captions}
+            data={this.state.data}
+            size={350}
+            options={{
+              scales: 5,
+              captionMargin: 18,
+              dots: true,
+              dotProps: () => ({
+                className: "dot",
+                mouseEnter: this.handleToolTip,
+                mouseLeave: this.handleToolTip
+              })
+            }}
+          />
+          {dot.key && (
+            <div
+              className="radar-tooltip"
+              style={{
+                left: this.mousePos[0] - 1000,
+                top: this.mousePos[1] - 110
+              }}
+            >
+              <span>
+                <h3>{Math.ceil(dot.value * 100)}</h3>
+              </span>
+            </div>
+          )}
+        </div>
       );
     }
   };
