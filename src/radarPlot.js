@@ -16,8 +16,8 @@ class RadarPlot extends Component {
     this.mousePos = [0, 0];
     this.aggr_skills = ["Goalkeeping", "Defense", "Midfield", "Attack"];
     this.gk_skills = [
-      "GK Diving",
       "GK Handling",
+      "GK Diving",
       "GK Kicking",
       "GK Positioning",
       "GK Reflexes"
@@ -79,53 +79,36 @@ class RadarPlot extends Component {
     let curr_data = [];
     let captions = [];
 
+    //add click event listeners to captions
+    const caption_class = document.getElementsByClassName("caption");
+    if (caption_class.length !== 0) {
+      for (var ind = 0; ind < caption_class.length; ind++) {
+        caption_class[ind].addEventListener("click", this.handleMouseClick);
+      }
+    }
+
+    //check for update
     if (prevProps.input !== this.props.input) {
       if (this.props.input[0] === undefined) {
-        this.setState({
-          input: [],
-          data: [],
-          captions: {},
-          dot: {}
-        });
+        this.reset();
         return;
       }
 
       let attr;
       if (this.props.input[0].BP === undefined) {
         //set attributes for aggregate view
-        //select attributes for aggregate
         this.mode = 0;
+        //select attributes for aggregate
         attr = this.aggr_skills;
-        const input0 = this.getDataValuesForPlot(attr, this.props.input[0], 1);
-        captions = this.getDataCaptionsForPlot(this.aggr_skills);
-        curr_data.push(input0);
-
-        if (this.props.input.length === 2) {
-          const input1 = this.getDataValuesForPlot(
-            attr,
-            this.props.input[1],
-            2
-          );
-          curr_data.push(input1);
-        }
+        [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
       } else {
-        this.mode = 1;
         //set attributes for player view
+        this.mode = 1;
         //select attributes by position of input[0]
         attr = this.skills[this.position[this.props.input[0].BP]];
-        const input0 = this.getDataValuesForPlot(attr, this.props.input[0], 1);
-        captions = this.getDataCaptionsForPlot(attr);
-        curr_data.push(input0);
-        if (this.props.input.length === 2) {
-          attr = this.skills[this.position[this.props.input[0].BP]];
-          const input1 = this.getDataValuesForPlot(
-            attr,
-            this.props.input[1],
-            2
-          );
-          curr_data.push(input1);
-        }
+        [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
       }
+
       this.setState({
         input: this.props.input,
         data: curr_data,
@@ -134,14 +117,14 @@ class RadarPlot extends Component {
     }
   }
 
-  //render state to Page
+  //render state to page
   render() {
     //console.log(this.state);
     const dot = this.state.dot;
     return <div>{this.displayRadarPlot(dot)}</div>;
   }
 
-  //helper methods
+  //helper methods////////////////////////////////
   displayRadarPlot = dot => {
     if (this.state.input.length !== 0) {
       return (
@@ -152,7 +135,7 @@ class RadarPlot extends Component {
             size={400}
             options={{
               scales: 5,
-              captionMargin: 25,
+              captionMargin: 10,
               setViewBox: () => "-75 -20 500 500",
               dots: true,
               dotProps: () => ({
@@ -178,6 +161,44 @@ class RadarPlot extends Component {
     }
   };
 
+  //handle mouse events////////////////////////////////
+  //toggle view on mouse click on caption
+  handleMouseClick = e => {
+    //toggle mode
+    this.mode = this.mode === 0 ? 1 : 0;
+    //console.log(e.target.innerHTML);
+
+    let curr_data, captions, attr;
+    if (this.mode === 0) {
+      //set attributes for aggregate view
+      //select attributes for aggregate
+      attr = this.aggr_skills;
+      [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
+    } else {
+      //set attributes for position view
+      //select attributes by position clicked on
+      switch (e.target.innerHTML) {
+        case "Goalkeeping":
+          attr = this.gk_skills;
+          break;
+        case "Defense":
+          attr = this.def_skills;
+          break;
+        case "Midfield":
+          attr = this.mid_skills;
+          break;
+        case "Attack":
+          attr = this.att_skills;
+          break;
+      }
+      [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
+    }
+    this.setState({
+      data: curr_data,
+      captions: captions
+    });
+  };
+
   //Tooltip
   //positioning the tooltip
   handleMouseMove = e => {
@@ -188,7 +209,7 @@ class RadarPlot extends Component {
     this.setState({ dot });
   };
 
-  //data for plot
+  //format data for plot////////////////////////////////
   getDataValuesForPlot = (attr, data, item_no) => {
     //API Info: attr = [List of attr], data=player data, item_no=1/2
 
@@ -227,7 +248,7 @@ class RadarPlot extends Component {
         attr_value["point" + attr.indexOf(d)] = avg_values[attr.indexOf(d)];
         return 0;
       });
-      console.log(attr_value);
+      //console.log(attr_value);
     } else {
       attr.map(d => {
         attr_value["point" + attr.indexOf(d)] = parseInt(data[d]) / 100;
@@ -254,6 +275,31 @@ class RadarPlot extends Component {
     });
 
     return attr_names;
+  };
+
+  getFormattedDataAndCaption = attr => {
+    let curr_data = [];
+    let captions = [];
+    const input0 = this.getDataValuesForPlot(attr, this.props.input[0], 1);
+    captions = this.getDataCaptionsForPlot(attr);
+    curr_data.push(input0);
+    if (this.props.input.length === 2) {
+      const input1 = this.getDataValuesForPlot(attr, this.props.input[1], 2);
+      curr_data.push(input1);
+    }
+    return [curr_data, captions];
+  };
+
+  //reset object////////////////////////////////
+  reset = () => {
+    this.mode = 1;
+    this.setState({
+      input: [],
+      data: [],
+      captions: {},
+      dot: {}
+    });
+    return;
   };
 }
 

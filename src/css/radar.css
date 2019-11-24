@@ -27,7 +27,7 @@
   font-size: 15px;
 }
 .caption:hover {
-  cursor: grab;
+  cursor: pointer;
 }
 
 .dot {

@@ -68,11 +68,12 @@ class Dashboard extends React.Component {
           <Col sm="4">
             <PlayerCard player={this.state.selectedPlayer} />
             <RadarPlot
+              key="radar-plot"
               input={[
-                test,
+                test /*,
                 this.state.playerData[
                   this.state.playerData.indexOf(this.state.selectedPlayer) + 1
-                ]
+                ]*/
               ]}
             />
           </Col>
