@@ -1,45 +1,45 @@
-body{
+body {
   background-color: #e5e5e5 !important;
 }
 
-.container-fluid{
-   margin-top:30px;
+.container-fluid {
+  margin-top: 30px;
 }
-.MuiAppBar-root{
-    padding: inherit !important;
-}
-
-.MuiAppBar-colorPrimary{
-    box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12) !important;
-    background-color: #1976d2 !important;
+.MuiAppBar-root {
+  padding: inherit !important;
 }
 
-button:focus{
-    outline: none !important;
+.MuiAppBar-colorPrimary {
+  box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  background-color: #1976d2 !important;
 }
 
-.MuiPaper-root{
-    padding: 15px 15px;
+button:focus {
+  outline: none !important;
 }
 
-.MuiCardMedia-root.image{
-    width:50px;
-    height:50px;
+.MuiPaper-root {
+  padding: 15px 15px;
 }
 
-.MuiAvatar-root.MuiAvatar-circle{
-    width: 60px;
-    height:60px;
+.MuiCardMedia-root.image {
+  width: 50px;
+  height: 50px;
 }
 
-.MuiCardContent-root span{
-    margin-left:20px;
+.MuiAvatar-root.MuiAvatar-circle {
+  width: 60px;
+  height: 60px;
 }
 
-.MuiTabs-fixed{
-    padding-top: 10px;
+.MuiCardContent-root span {
+  margin-left: 20px;
+}
+
+.MuiTabs-fixed {
+  padding-top: 10px;
 }
 
 .MuiTab-textColorInherit.Mui-selected {
-    font-weight: bolder;
+  font-weight: bolder;
 }

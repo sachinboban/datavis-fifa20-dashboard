@@ -44,6 +44,7 @@ class Dashboard extends React.Component {
   }
 
   onSelectionChange = selectedPlayer => {
+    //console.log(selectedPlayer);
     this.setState({
       playerData: this.state.playerData,
       selectedPlayer: selectedPlayer
@@ -51,6 +52,10 @@ class Dashboard extends React.Component {
   };
 
   render() {
+    const test = this.state.selectedPlayer;
+    if (test !== undefined) {
+      //test.BP = undefined;
+    }
     return (
       <Container fluid>
         <Row>
@@ -63,8 +68,12 @@ class Dashboard extends React.Component {
           <Col sm="4">
             <PlayerCard player={this.state.selectedPlayer} />
             <RadarPlot
-              player1={this.state.selectedPlayer}
-              player2={this.state.playerData[1]}
+              input={[
+                test,
+                this.state.playerData[
+                  this.state.playerData.indexOf(this.state.selectedPlayer) + 1
+                ]
+              ]}
             />
           </Col>
         </Row>

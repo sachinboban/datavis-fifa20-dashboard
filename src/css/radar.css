@@ -24,7 +24,10 @@
   font-family: Verdana;
   fill: #000000;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 15px;
+}
+.caption:hover {
+  cursor: grab;
 }
 
 .dot {
@@ -41,7 +44,7 @@
 }
 
 .radar-tooltip {
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -150%);
   background-color: #333;
   color: white;
