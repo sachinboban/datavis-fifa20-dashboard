@@ -6,7 +6,8 @@ import "./css/radar.css";
 class RadarPlot extends Component {
   constructor(props) {
     super(props);
-    this.mode = 1;
+    this.radar_mode = -1; //variable to track overall vs skill view 4=4-axis view/ 6=6-axis view
+    this.last_view = ""; //variable to track last skill view "GK" "DEF" "MID" ATT"
     this.state = {
       input: [],
       data: [],
@@ -17,9 +18,10 @@ class RadarPlot extends Component {
     this.aggr_skills = ["Goalkeeping", "Defense", "Midfield", "Attack"];
     this.gk_skills = [
       "GK Handling",
+      "Composure",
       "GK Diving",
-      "GK Kicking",
       "GK Positioning",
+      "GK Kicking",
       "GK Reflexes"
     ];
     this.def_skills = [
@@ -89,7 +91,7 @@ class RadarPlot extends Component {
 
     //check for update
     if (prevProps.input !== this.props.input) {
-      if (this.props.input[0] === undefined) {
+      if (this.props.input.length === 0) {
         this.reset();
         return;
       }
@@ -97,15 +99,34 @@ class RadarPlot extends Component {
       let attr;
       if (this.props.input[0].BP === undefined) {
         //set attributes for aggregate view
-        this.mode = 0;
-        //select attributes for aggregate
-        attr = this.aggr_skills;
+        if (this.radar_mode === -1) this.radar_mode = 4;
+
+        if (this.radar_mode === 4) {
+          //select attributes for aggregate
+          attr = this.aggr_skills;
+          this.last_view = "";
+        } else if (this.radar_mode === 6) {
+          //select attributes based on last view
+          attr = this.skills[this.last_view];
+        }
         [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
       } else {
         //set attributes for player view
-        this.mode = 1;
-        //select attributes by position of input[0]
-        attr = this.skills[this.position[this.props.input[0].BP]];
+        if (this.radar_mode === -1) this.radar_mode = 6;
+
+        if (this.radar_mode === 4) {
+          //select attributes for aggregate
+          attr = this.aggr_skills;
+          this.last_view = "";
+        } else if (this.radar_mode === 6) {
+          if (this.last_view != "") {
+            //select attributes based on last view
+            attr = this.skills[this.last_view];
+          } else {
+            //select attributes by position of input[0]
+            attr = this.skills[this.position[this.props.input[0].BP]];
+          }
+        }
         [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
       }
 
@@ -136,7 +157,7 @@ class RadarPlot extends Component {
             options={{
               scales: 5,
               captionMargin: 10,
-              setViewBox: () => "-75 -20 500 500",
+              setViewBox: () => "-60 -20 500 500",
               dots: true,
               dotProps: () => ({
                 className: "dot",
@@ -165,34 +186,38 @@ class RadarPlot extends Component {
   //toggle view on mouse click on caption
   handleMouseClick = e => {
     //toggle mode
-    this.mode = this.mode === 0 ? 1 : 0;
+    this.radar_mode = this.radar_mode === 4 ? 6 : 4;
     //console.log(e.target.innerHTML);
 
     let curr_data, captions, attr;
-    if (this.mode === 0) {
+    if (this.radar_mode === 4) {
       //set attributes for aggregate view
       //select attributes for aggregate
+      this.last_view = "";
       attr = this.aggr_skills;
-      [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
-    } else {
+    } else if (this.radar_mode === 6) {
       //set attributes for position view
       //select attributes by position clicked on
       switch (e.target.innerHTML) {
         case "Goalkeeping":
+          this.last_view = "GK";
           attr = this.gk_skills;
           break;
         case "Defense":
+          this.last_view = "DEF";
           attr = this.def_skills;
           break;
         case "Midfield":
+          this.last_view = "MID";
           attr = this.mid_skills;
           break;
         case "Attack":
+          this.last_view = "ATT";
           attr = this.att_skills;
           break;
       }
-      [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
     }
+    [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
     this.setState({
       data: curr_data,
       captions: captions
@@ -215,7 +240,7 @@ class RadarPlot extends Component {
 
     //populate attribute values for player or group
     let attr_value = {};
-    if (this.mode === 0) {
+    if (this.radar_mode === 4) {
       let agg_values = [];
       agg_values.push(
         this.gk_skills.map(d => {
@@ -249,7 +274,7 @@ class RadarPlot extends Component {
         return 0;
       });
       //console.log(attr_value);
-    } else {
+    } else if (this.radar_mode === 6) {
       attr.map(d => {
         attr_value["point" + attr.indexOf(d)] = parseInt(data[d]) / 100;
         return 0;
@@ -292,7 +317,8 @@ class RadarPlot extends Component {
 
   //reset object////////////////////////////////
   reset = () => {
-    this.mode = 1;
+    this.radar_mode = -1;
+    this.last_view = "";
     this.setState({
       input: [],
       data: [],

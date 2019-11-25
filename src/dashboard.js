@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       playerData: [],
-      selectedPlayer: undefined
+      selectedPlayer: []
     };
   }
 
@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
           );
           this.setState({
             playerData: data,
-            selectedPlayer: undefined
+            selectedPlayer: []
           });
         });
       })
@@ -44,17 +44,31 @@ class Dashboard extends React.Component {
   }
 
   onSelectionChange = selectedPlayer => {
-    //console.log(selectedPlayer);
+    let players = [...this.state.selectedPlayer];
+    if (selectedPlayer === undefined) {
+      players = [];
+    } else {
+      if (players.length <= 1) {
+        players.push(selectedPlayer);
+      } else if (players.length === 2) {
+        if (players[0] == selectedPlayer) {
+          players.pop();
+        } else {
+          players[1] = selectedPlayer;
+        }
+      }
+    }
     this.setState({
       playerData: this.state.playerData,
-      selectedPlayer: selectedPlayer
+      selectedPlayer: players
     });
   };
 
   render() {
+    //console.log(this.state.selectedPlayer);
     const test = this.state.selectedPlayer;
-    if (test !== undefined) {
-      //test.BP = undefined;
+    if (test.length !== 0) {
+      //test[0].BP = undefined;
     }
     return (
       <Container fluid>
@@ -67,15 +81,7 @@ class Dashboard extends React.Component {
           </Col>
           <Col sm="4">
             <PlayerCard player={this.state.selectedPlayer} />
-            <RadarPlot
-              key="radar-plot"
-              input={[
-                test /*,
-                this.state.playerData[
-                  this.state.playerData.indexOf(this.state.selectedPlayer) + 1
-                ]*/
-              ]}
-            />
+            <RadarPlot key="radar-plot" input={test} />
           </Col>
         </Row>
       </Container>

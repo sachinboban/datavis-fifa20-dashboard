@@ -1,7 +1,12 @@
 /*Style for radar plot*/
+svg {
+  height: 100%;
+  width: 100%;
+}
 .shape {
-  stroke-width: 2;
+  stroke-width: 4;
   fill-opacity: 0.3;
+  transition: d 1s;
 }
 
 /*
