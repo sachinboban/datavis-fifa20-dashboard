@@ -1,77 +1,84 @@
 import React from "react";
 import PlayerTable from "./table";
 import PlayerCard from "./playerCard";
-import { Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import * as d3 from "d3";
-import data from "./data/raw.csv";
+import playerData from "./data/raw.csv";
 import leagueData from "./data/team-league.csv";
 import getBarChartJSX from "./barChart";
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playerData: [],
-      selectedPlayer: undefined
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            playerData: [],
+            selectedPlayers: undefined
+        };
+    }
 
-  componentDidMount() {
-    d3.csv(data)
-      .then(data => {
-        // data.forEach((player,index) => player.id = index);
-        d3.csv(leagueData).then(leagueData => {
-          let clubToLeagueMap = {};
-          leagueData.forEach(row => {
+    preProcessData(playerData, leagueData) {
+        let clubToLeagueMap = {};
+        leagueData.forEach(row => {
             clubToLeagueMap[row["Name"]] = row["League"];
-          });
-
-          data.forEach(
-            player =>
-              (player.League = clubToLeagueMap[player["Club"]]
-                ? clubToLeagueMap[player["Club"]]
-                : "")
-          );
-
-          data.forEach(
-            player => (player.Overall = getBarChartJSX(player.Overall, 80))
-          );
-
-          this.setState({
-            playerData: data,
-            selectedPlayer: undefined
-          });
         });
-      })
-      .catch(function(err) {
-        console.log("Error loading player data");
-      });
-  }
 
-  onSelectionChange = selectedPlayer => {
-    this.setState({
-      playerData: this.state.playerData,
-      selectedPlayer: selectedPlayer
-    });
-  };
+        let transformedData = [];
+        for (let player of playerData) {
+            player.League = clubToLeagueMap[player["Club"]];
+            player.Overall = getBarChartJSX(player.Overall, 80);
+            player.Pos = undefined;
+            if (player.League && player.Club) {
+                transformedData.push(player);
+            }
+        }
 
-  render() {
-    return (
-      <Container fluid>
-        <Row>
-          <Col sm="8">
-            <PlayerTable
-              data={this.state.playerData}
-              onSelectionChange={this.onSelectionChange}
-            />{" "}
-          </Col>
-          <Col sm="4">
-            <PlayerCard player={this.state.selectedPlayer} />
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+        return transformedData;
+    }
+
+    componentDidMount() {
+        this.setState({
+            playerData: [],
+            selectedPlayers: undefined
+        });
+        d3.csv(playerData).then(playerData => {
+            d3.csv(leagueData).then(leagueData => {
+
+                let transformedData = this.preProcessData(playerData, leagueData);
+                this.setState({
+                    playerData: transformedData,
+                    selectedPlayers: undefined
+                });
+            });
+        })
+            .catch(function (err) {
+                console.log("Error loading player data");
+            });
+    }
+
+    onSelectionChange = selectedPlayers => {
+        this.setState({
+            playerData: this.state.playerData,
+            selectedPlayers: selectedPlayers
+        });
+    };
+
+    render() {
+        return (
+            <Container fluid>
+                <Row>
+                    <Col sm="8">
+                        <PlayerTable
+                            data={this.state.playerData}
+                            onSelectionChange={this.onSelectionChange}
+                        />
+                    </Col>
+                    <Col sm="4">
+                        <PlayerCard player={this.state.selectedPlayers ? this.state.selectedPlayers[0]: undefined}/>
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
 }
 
 export default Dashboard;

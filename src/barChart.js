@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 function getBarChartJSX(width, maxWidth) {
   const actualWidth = (width * maxWidth) / 100;

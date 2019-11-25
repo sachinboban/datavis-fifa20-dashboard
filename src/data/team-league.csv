@@ -22,7 +22,7 @@ Milan,Serie A TIM,80,80,79,80,/static/FIFA20/images/crest/5/light/notfound.png
 Roma,Serie A TIM,80,78,80,80,/static/FIFA20/images/crest/5/light/notfound.png
 Atalanta,Serie A TIM,82,78,78,79,/static/FIFA20/images/crest/5/light/notfound.png
 RB Leipzig,Bundesliga,81,80,78,79,/static/FIFA20/images/crest/5/light/notfound.png
-Athletic Club,LaLiga Santander,81,79,79,79,/static/FIFA20/images/crest/5/light/notfound.png
+Athletic Club de Bilbao,LaLiga Santander,81,79,79,79,/static/FIFA20/images/crest/5/light/notfound.png
 Ajax,Eredivisie,80,79,78,79,/static/FIFA20/images/crest/5/light/notfound.png
 OL,Ligue 1 Conforama,80,78,77,79,/static/FIFA20/images/crest/5/light/notfound.png
 Sevilla FC,LaLiga Santander,79,80,79,79,/static/FIFA20/images/crest/5/light/notfound.png
@@ -30,7 +30,7 @@ FC Porto,Liga NOS,79,78,81,79,/static/FIFA20/images/crest/5/light/notfound.png
 AS Monaco,Ligue 1 Conforama,79,78,76,79,/static/FIFA20/images/crest/5/light/notfound.png
 SL Benfica,Liga NOS,78,79,80,79,/static/FIFA20/images/crest/5/light/notfound.png
 Everton,Premier League,77,79,80,79,/static/FIFA20/images/crest/5/light/7.webp
-West Ham,Premier League,83,79,76,78,/static/FIFA20/images/crest/5/light/19.webp
+West Ham United,Premier League,83,79,76,78,/static/FIFA20/images/crest/5/light/19.webp
 Villarreal CF,LaLiga Santander,80,77,78,78,/static/FIFA20/images/crest/5/light/483.webp
 Torino,Serie A TIM,80,77,78,78,/static/FIFA20/images/crest/5/light/54.webp
 Leicester City,Premier League,80,77,77,78,/static/FIFA20/images/crest/5/light/95.webp
@@ -44,16 +44,16 @@ Wolves,Premier League,77,81,77,78,/static/FIFA20/images/crest/5/light/notfound.p
 Watford,Premier League,77,79,76,78,/static/FIFA20/images/crest/5/light/notfound.png
 VfL Wolfsburg,Bundesliga,77,78,76,78,/static/FIFA20/images/crest/5/light/notfound.png
 RC Celta,LaLiga Santander,80,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
-Galatasaray,Süper Lig,79,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Galatasaray SK,Süper Lig,79,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
 River Plate,SAF,78,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
-Newcastle Utd,Premier League,78,76,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Newcastle United,Premier League,78,76,76,77,/static/FIFA20/images/crest/5/light/notfound.png
 Sporting CP,Liga NOS,77,79,76,77,/static/FIFA20/images/crest/5/light/notfound.png
 OM,Ligue 1 Conforama,77,79,75,77,/static/FIFA20/images/crest/5/light/notfound.png
 RCD Espanyol,LaLiga Santander,77,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
 Boca Juniors,SAF,76,77,76,77,/static/FIFA20/images/crest/5/light/notfound.png
 Werder Bremen,Bundesliga,75,79,75,77,/static/FIFA20/images/crest/5/light/notfound.png
 Crystal Palace,Premier League,75,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
-AFC Bournemouth,Premier League,75,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+Bournemouth,Premier League,75,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
 Beşiktaş,Süper Lig,79,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
 Fiorentina,Serie A TIM,78,75,77,76,/static/FIFA20/images/crest/5/light/notfound.png
 PSV,Eredivisie,78,75,75,76,/static/FIFA20/images/crest/5/light/notfound.png
@@ -65,7 +65,7 @@ Brighton,Premier League,77,76,75,76,/static/FIFA20/images/crest/5/light/1808.web
 Hertha BSC,Bundesliga,77,75,75,76,/static/FIFA20/images/crest/5/light/166.webp
 LOSC Lille,Ligue 1 Conforama,76,77,75,76,/static/FIFA20/images/crest/5/light/65.webp
 Cagliari,Serie A TIM,76,77,72,76,/static/FIFA20/images/crest/5/light/notfound.png
-Schalke,Bundesliga,76,76,77,76,/static/FIFA20/images/crest/5/light/notfound.png
+FC Schalke 04,Bundesliga,76,76,77,76,/static/FIFA20/images/crest/5/light/notfound.png
 SC Braga,Liga NOS,76,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
 Club Brugge,Pro League,76,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
 ASSE,Ligue 1 Conforama,76,75,76,76,/static/FIFA20/images/crest/5/light/notfound.png
@@ -98,7 +98,7 @@ Royal Antwerp FC,Pro League,78,74,73,74,/static/FIFA20/images/crest/5/light/notf
 Feyenoord,Eredivisie,77,73,74,74,/static/FIFA20/images/crest/5/light/notfound.png
 Girona FC,LaLiga 1 I 2 I 3,77,73,73,74,/static/FIFA20/images/crest/5/light/notfound.png
 Atlético Mineiro,Liga do Brasil,76,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
-Norwich,Premier League,76,73,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+Norwich City,Premier League,76,73,73,74,/static/FIFA20/images/crest/5/light/notfound.png
 Dynamo Kyiv,Rest of World,75,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
 Monterrey,LIGA Bancomer MX,75,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
 Spartak Moscow,Rest of World,75,74,74,74,/static/FIFA20/images/crest/5/light/notfound.png

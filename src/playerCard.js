@@ -46,6 +46,9 @@ class PlayerCard extends React.Component {
                                     <li>Click on the arrow next to column headers to sort the table in ascending/
                                         descending order.
                                     </li>
+                                    <li>
+                                        Click on the icon to the right of each column name to group by that column.
+                                    </li>
                                 </ul>
                             </Typography>
                         </CardContent>
