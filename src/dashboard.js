@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
             />{" "}
           </Col>
           <Col sm="4">
-            <PlayerCard player={this.state.selectedPlayer} />
+            <PlayerCard players={this.state.selectedPlayer} />
             <RadarPlot key="radar-plot" input={test} />
           </Col>
         </Row>
