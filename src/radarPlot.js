@@ -149,7 +149,7 @@ class RadarPlot extends Component {
   displayRadarPlot = dot => {
     if (this.state.input.length !== 0) {
       return (
-        <Col>
+        <Col className="radar-chart">
           <RadarChart
             captions={this.state.captions}
             data={this.state.data}
