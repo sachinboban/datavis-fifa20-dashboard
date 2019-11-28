@@ -122,9 +122,11 @@ class PlayerTable extends React.Component {
         const styles = {
             selection0: {
                 backgroundColor: 'antiqueWhite',
+                boxShadow: '#777 1px 1px 4px'
             },
             selection1: {
                 backgroundColor: 'lavender',
+                boxShadow: '#777 1px 1px 4px'
             }
         };
 
