@@ -51,10 +51,23 @@ button:focus {
 .bar-chart {
   width: 100%;
   background: #e5e5e5;
+  box-shadow: 1px 2px 2px #bbb;
 }
 
 .bar {
   background: #1976d2;
-  text-align: right;
+  text-align: center;
   color: #fff;
+  box-shadow: 0px 2px 1px #282858;
+}
+
+thead > tr{
+  box-shadow: 1px 2px 5px #aaa;
+  background: aliceblue;
+}
+
+.pos-dot{
+  box-shadow: 1px 1px 2px #000;
+  display: inline-block;
+  float: left;
 }

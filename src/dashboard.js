@@ -6,6 +6,7 @@ import * as d3 from "d3";
 import playerData from "./data/raw.csv";
 import leagueData from "./data/team-league.csv";
 import getBarChartJSX from "./barChart";
+import getPositionIndicator from "./positionIndicator";
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Dashboard extends React.Component {
         for (let player of playerData) {
             player.League = clubToLeagueMap[player["Club"]];
             player.Overall = getBarChartJSX(player.Overall, 80);
-            player.Pos = undefined;
+            player.Pos = getPositionIndicator(player.Position);
             if (player.League && player.Club) {
                 transformedData.push(player);
             }

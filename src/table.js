@@ -52,6 +52,9 @@ class PlayerTable extends React.Component {
             {columnName: 'Pos', filteringEnabled: false},
             {columnName: 'Overall', filteringEnabled: false},
         ];
+        this.sortingState = [
+            {columnName: 'Pos', sortingEnabled: false},
+        ];
         this.state = {
             rows: [],
             columns: [],
@@ -125,7 +128,7 @@ class PlayerTable extends React.Component {
             }
         };
 
-        const TableRow = ({tableRow, onToggle, ...restProps}) => {
+        const TableSelectionRow = ({tableRow, onToggle, ...restProps}) => {
             return (
                 <TableSelection.Row
                     {...restProps}
@@ -135,6 +138,18 @@ class PlayerTable extends React.Component {
                     }}
                     style={{
                         ...styles['selection'+ tableRow.row.selectionIdx],
+                    }}
+                />
+            );
+        };
+
+        const TableRow = ({tableRow, onToggle, ...restProps}) => {
+            return (
+                <VirtualTable.Row
+                    {...restProps}
+                    onClick={() => {
+                        alert("works");
+                        onToggle();
                     }}
                 />
             );
@@ -153,6 +168,7 @@ class PlayerTable extends React.Component {
                     <Grid rows={this.state.rows} columns={this.state.columns}>
                         <SortingState
                             defaultSorting={[{columnName: "Name", direction: "asc"}]}
+                            columnExtensions={this.sortingState}
                         />
                         <IntegratedSorting/>
 
@@ -165,10 +181,10 @@ class PlayerTable extends React.Component {
                             selection={this.state.selection}
                             onSelectionChange={this.onSelectionChange}
                         />
-                        <VirtualTable columnExtensions={this.columnWidths}/>
+                        <VirtualTable columnExtensions={this.columnWidths} rowComponent={TableRow}/>
                         <TableHeaderRow showSortingControls showGroupingControls/>
                         <TableSelection selectByRowClick highlightRow showSelectionColumn={false}
-                                        rowComponent={TableRow}/>
+                                        rowComponent={TableSelectionRow}/>
                         <TableGroupRow cellComponent={GroupCell}/>
                         <GroupSummaryRow/>
                         <Toolbar/>
