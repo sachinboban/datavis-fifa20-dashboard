@@ -23,6 +23,7 @@ import {
 } from "@devexpress/dx-react-grid";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import {GroupSummaryRow} from "./groupSummaryRow";
+import {TableHeaderCell, TableRow, TableSelectionRow, GroupCell} from "./customTableComps";
 
 class PlayerTable extends React.Component {
     constructor(props) {
@@ -99,7 +100,7 @@ class PlayerTable extends React.Component {
         //alternate selection style between two selections in round robin
         if (selection.length === 1) {
             rows[selection[0]].selectionIdx = rows[selection[0]].selectionIdx === 1 ? 1 : 0;
-        } else if(selection.length === 2){
+        } else if (selection.length === 2) {
             rows[selection[1]].selectionIdx = rows[selection[0]].selectionIdx === 0 ? 1 : 0;
         }
 
@@ -111,7 +112,7 @@ class PlayerTable extends React.Component {
         });
         //notify other views about selection change
         let selectedPlayers = [];
-        for(let index of selection){
+        for (let index of selection) {
             selectedPlayers.push(this.state.rows[index]);
         }
         this.props.onSelectionChange(selectedPlayers);
@@ -119,48 +120,6 @@ class PlayerTable extends React.Component {
 
 
     render() {
-        const styles = {
-            selection0: {
-                backgroundColor: 'antiqueWhite',
-                boxShadow: '#777 1px 1px 4px'
-            },
-            selection1: {
-                backgroundColor: 'lavender',
-                boxShadow: '#777 1px 1px 4px'
-            }
-        };
-
-        const TableSelectionRow = ({tableRow, onToggle, ...restProps}) => {
-            return (
-                <TableSelection.Row
-                    {...restProps}
-                    onClick={() => {
-                        tableRow.row.selectionIdx = undefined;
-                        onToggle();
-                    }}
-                    style={{
-                        ...styles['selection'+ tableRow.row.selectionIdx],
-                    }}
-                />
-            );
-        };
-
-        const TableRow = ({tableRow, onToggle, ...restProps}) => {
-            return (
-                <VirtualTable.Row
-                    {...restProps}
-                    onClick={() => {
-                        alert("works");
-                        onToggle();
-                    }}
-                />
-            );
-        };
-
-        const GroupCell = ({colSpan, ...restProps}) => {
-            return <TableGroupRow.Cell {...restProps} colSpan={colSpan - 1}/>;
-        };
-
         return (
             <Col>
                 <Paper>
@@ -184,13 +143,15 @@ class PlayerTable extends React.Component {
                             onSelectionChange={this.onSelectionChange}
                         />
                         <VirtualTable columnExtensions={this.columnWidths} rowComponent={TableRow}/>
-                        <TableHeaderRow showSortingControls showGroupingControls/>
+                        <TableHeaderRow showSortingControls showGroupingControls draggingEnabled={false}
+                                        cellComponent={TableHeaderCell}/>
                         <TableSelection selectByRowClick highlightRow showSelectionColumn={false}
                                         rowComponent={TableSelectionRow}/>
                         <TableGroupRow cellComponent={GroupCell}/>
                         <GroupSummaryRow/>
                         <Toolbar/>
-                        <GroupingPanel showGroupingControls showSortingControls/>
+                        <GroupingPanel showGroupingControls showSortingControls
+                                       messages={{'groupByColumn': 'Click on plus icon next to column name to group by that column'}}/>
                         <TableFilterRow/>
                     </Grid>
                 </Paper>

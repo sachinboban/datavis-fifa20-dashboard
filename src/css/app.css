@@ -59,6 +59,7 @@ button:focus {
   text-align: center;
   color: #fff;
   box-shadow: 0px 2px 1px #282858;
+  width: 0px;
 }
 
 thead > tr{
@@ -70,4 +71,8 @@ thead > tr{
   box-shadow: 1px 1px 2px #000;
   display: inline-block;
   float: left;
+}
+
+th .MuiButtonBase-root{
+  padding: 0;
 }

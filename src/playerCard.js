@@ -47,7 +47,7 @@ class PlayerCard extends React.Component {
                                         descending order.
                                     </li>
                                     <li>
-                                        Click on the icon to the right of each column name to group by that column.
+                                        Click on plus icon to the right of each column name to group by that column.
                                     </li>
                                 </ul>
                             </Typography>
