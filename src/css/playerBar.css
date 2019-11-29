@@ -1,0 +1,45 @@
+.player-bar-svg {
+  height: 15px;
+  width: 101px;
+}
+
+.player-bar-rect-default {
+  position: relative;
+  y: 1;
+  x: 1;
+  height: 13px;
+  width: 100px;
+  fill: gray;
+  opacity: 0.5;
+}
+.player-bar-rect-default:hover {
+  opacity: 1;
+}
+
+.player-bar-rect {
+  position: relative;
+  y: 1;
+  x: 1;
+  height: 13px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.player-bar-rect:hover {
+  stroke: black;
+  stroke-width: 2;
+}
+
+.player-bar-label {
+  font-size: 15px;
+}
+.player-bar-tooltip {
+  position: fixed;
+  transform: translate(-50%, -150%);
+  background-color: lavenderblush;
+  stroke: black;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 2px;
+  z-index: 200;
+}
