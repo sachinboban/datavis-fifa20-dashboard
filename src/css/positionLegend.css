@@ -77,4 +77,5 @@
 .MuiAvatar-root.MuiAvatar-circle{
     width: 40px;
     height: 40px;
+    box-shadow: 1px 1px 2px #000;
 }
