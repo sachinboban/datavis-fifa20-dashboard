@@ -51,7 +51,7 @@ class Dashboard extends React.Component {
       if (players.length <= 1) {
         players.push(selectedPlayer);
       } else if (players.length === 2) {
-        if (players[0] == selectedPlayer) {
+        if (players[0] === selectedPlayer) {
           players.pop();
         } else {
           players[1] = selectedPlayer;
@@ -62,6 +62,14 @@ class Dashboard extends React.Component {
       playerData: this.state.playerData,
       selectedPlayer: players
     });
+  };
+
+  getOveralls = () => {
+    const overalls = this.state.playerData.map(d => {
+      return d.Overall;
+    });
+    overalls.sort();
+    return overalls;
   };
 
   render() {
@@ -80,7 +88,10 @@ class Dashboard extends React.Component {
             />{" "}
           </Col>
           <Col sm="4">
-            <PlayerCard players={this.state.selectedPlayer} />
+            <PlayerCard
+              overalls={this.getOveralls()}
+              players={this.state.selectedPlayer}
+            />
             <RadarPlot key="radar-plot" input={test} />
           </Col>
         </Row>

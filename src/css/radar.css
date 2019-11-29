@@ -121,8 +121,9 @@
 .radar-tooltip {
   position: fixed;
   transform: translate(-50%, -150%);
-  background-color: #333;
-  color: white;
+  background-color: lavenderblush;
+  stroke: black;
+  color: black;
   padding: 5px 10px;
   border-radius: 2px;
   z-index: 200;

@@ -119,7 +119,7 @@ class RadarPlot extends Component {
           attr = this.aggr_skills;
           this.last_view = "";
         } else if (this.radar_mode === 6) {
-          if (this.last_view != "") {
+          if (this.last_view !== "") {
             //select attributes based on last view
             attr = this.skills[this.last_view];
           } else {
