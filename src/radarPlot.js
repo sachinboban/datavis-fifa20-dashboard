@@ -8,6 +8,7 @@ class RadarPlot extends Component {
     super(props);
     this.radar_mode = -1; //variable to track overall vs skill view 4=4-axis view/ 6=6-axis view
     this.last_view = ""; //variable to track last skill view "GK" "DEF" "MID" ATT"
+    this.playerColor = ["red", "green"];
     this.state = {
       input: [],
       data: [],
@@ -283,9 +284,9 @@ class RadarPlot extends Component {
 
     let player_color;
     if (item_no === 1) {
-      player_color = "red";
+      player_color = this.playerColor[0];
     } else {
-      player_color = "green";
+      player_color = this.playerColor[1];
     }
 
     return { data: attr_value, meta: { color: player_color } };
