@@ -60,7 +60,8 @@ class PlayerTable extends React.Component {
             rows: [],
             columns: [],
             selection: [],
-            dataLoadComplete: 25
+            dataLoadComplete: 25,
+            isLegendDiaglogOpen: false
         };
     }
 
@@ -69,7 +70,8 @@ class PlayerTable extends React.Component {
             rows: [],
             columns: [],
             selection: [],
-            dataLoadComplete: 75
+            dataLoadComplete: 75,
+            isLegendDiaglogOpen: false
         });
     }
 
@@ -77,13 +79,17 @@ class PlayerTable extends React.Component {
         if (prevProps.data !== this.props.data && this.props.data && this.props.data.length > 0) {
             let rows = this.props.data.slice();
             let columns = this.columnHeaders.map(col => {
+                if(col === "Pos"){
+                    return {name: col, title: "Position"};
+                }
                 return {name: col, title: col};
             });
             this.setState({
                 rows: rows,
                 columns: columns,
                 selection: [],
-                dataLoadComplete: 100
+                dataLoadComplete: 100,
+                isLegendDiaglogOpen: false
             });
         }
     }
@@ -108,7 +114,8 @@ class PlayerTable extends React.Component {
             rows: rows,
             columns: this.state.columns,
             selection: selection,
-            dataLoadComplete: this.state.dataLoadComplete
+            dataLoadComplete: this.state.dataLoadComplete,
+            isLegendDiaglogOpen: this.state.isLegendDiaglogOpen
         });
         //notify other views about selection change
         let selectedPlayers = [];
@@ -117,7 +124,6 @@ class PlayerTable extends React.Component {
         }
         this.props.onSelectionChange(selectedPlayers);
     };
-
 
     render() {
         return (

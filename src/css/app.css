@@ -31,7 +31,7 @@ button:focus {
   height: 50px;
 }
 
-.MuiAvatar-root.MuiAvatar-circle {
+.player-view .MuiAvatar-root.MuiAvatar-circle {
   width: 60px;
   height: 60px;
 }
@@ -67,12 +67,10 @@ thead > tr{
   background: aliceblue;
 }
 
-.pos-dot{
-  box-shadow: 1px 1px 2px #000;
-  display: inline-block;
-  float: left;
-}
-
 th .MuiButtonBase-root{
   padding: 0;
+}
+
+.ground{
+
 }

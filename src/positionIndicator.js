@@ -3,52 +3,68 @@ import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
 import orange from '@material-ui/core/colors/orange';
+import indigo from '@material-ui/core/colors/indigo';
+import lightGreen from '@material-ui/core/colors/lightGreen';
+import teal from '@material-ui/core/colors/teal';
+import Tooltip from '@material-ui/core/Tooltip';
+import Avatar from "@material-ui/core/Avatar";
 
-let positionMap = {
+export let colorMap = {
     GK: {
-        GK: 900
+        GK: orange[600]
     },
     DEF: {
-        CB: 300,
-        LB: 700,
-        RB: 900,
-        LWB: 'A200',
-        RWB: 'A400'
+        CB: blue[300],
+        LB: blue['A200'],
+        RB: blue[900],
+        LWB: indigo[300],
+        RWB: indigo['A700'],
     },
     MID: {
-        CDM: 300,
-        CM: 500,
-        CAM: 700,
-        LM: 900,
-        RM: 'A200',
-        LW: 'A400',
-        RW: 'A700',
+        CDM: lightGreen[300],
+        CAM: green[500],
+        LM: teal[700],
+        CM: teal[900],
+        RM: teal['A700'],
+        LW: green['A400'],
+        RW: lightGreen['A700'],
     },
     ATT: {
-        CF: 500,
-        ST: 900
+        CF: red[900],
+        ST: red[500]
     }
 };
 
-
-let colorMap = {
-    GK: orange,
-    DEF: blue,
-    MID: green,
-    ATT: red
+let tooltip = {
+    GK: "Goal Keeper",
+    CB: "Center Back",
+    LB: "Left Back",
+    RB: "Right Back",
+    LWB: "Left Wing Back",
+    RWB: "Right Wing Back",
+    CDM: "Central Defensive Midfielder",
+    CM: "Central Midfielder",
+    CAM: "Central Attacking Midfielder",
+    LM: "Left Midfielder",
+    RM: 'Right Midfielder',
+    LW: 'Left Winger',
+    RW: 'Right Winger',
+    CF: "Center Forward",
+    ST: "Striker"
 };
+
+
 
 function getColorByPosition(pos) {
     let positionGroup;
-    for (let posGrp in positionMap) {
-        if (positionMap[posGrp][pos]) {
+    for (let posGrp in colorMap) {
+        if (colorMap[posGrp][pos]) {
             positionGroup = posGrp;
             break;
         }
     }
 
-    let colorForGroup = colorMap[positionGroup];
-    return colorForGroup[positionMap[positionGroup][pos]];
+    return colorMap[positionGroup][pos];
 }
 
 function createDots(positions) {
@@ -57,12 +73,21 @@ function createDots(positions) {
         let color = getColorByPosition(position);
         const dotStyle = {
             backgroundColor: color,
-            borderRadius: 5,
-            width: 10,
-            height: 10,
-            marginLeft:10
+            width: 25,
+            height: 25,
+            marginLeft: 5,
+            fontSize: 10,
+            boxShadow: '1px 1px 2px #000',
+            fontWeight: 'bolder'
         };
-        dots.push(<div key={position} title={position} className="pos-dot" style={dotStyle}/>);
+        dots.push(
+            <Tooltip title={tooltip[position]} key={position}>
+                <Avatar
+                    style={dotStyle}>
+                    {position}
+                </Avatar>
+            </Tooltip>
+        );
     }
 
     return dots;
@@ -71,7 +96,7 @@ function createDots(positions) {
 function getPositionIndicator(position) {
     let positions = position.split(",");
     return (
-        <div className="pos">{createDots(positions)}</div>
+        <div className="pos" style={{display: 'flex'}}>{createDots(positions)}</div>
     );
 }
 

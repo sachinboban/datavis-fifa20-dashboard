@@ -7,13 +7,48 @@ import {
     TableGroupRow,
     TableHeaderRow, TableSelection, VirtualTable
 } from '@devexpress/dx-react-grid-material-ui';
+import {makeStyles} from '@material-ui/core/styles';
+import PositionPopover from "./positionPopover";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const styles = theme => ({
     button: {
         margin: theme.spacing(0, 1),
-    },
+    }
 });
 
+const useStyles = makeStyles(theme => ({
+    button: {
+        margin: theme.spacing(0, 1),
+    }
+}));
+
+function PositionLegendButton() {
+    const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handlePopoverOpen = event => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handlePopoverClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <div>
+            <IconButton
+                className={classes.button}
+                onMouseEnter={handlePopoverOpen}
+                onMouseLeave={handlePopoverClose}
+            >
+                <HelpOutlineIcon/>
+            </IconButton>
+            <PositionPopover anchorEl={anchorEl} handlePopoverClose={handlePopoverClose}/>
+        </div>
+    );
+
+}
 
 const TableHeaderCellBase = ({column, children, classes, onGroup, groupingEnabled, draggingEnabled, ...restProps}) => {
     if (column.name === 'Club' || column.name === 'Country' || column.name === 'League') {
@@ -21,11 +56,13 @@ const TableHeaderCellBase = ({column, children, classes, onGroup, groupingEnable
         return (
             <TableHeaderRow.Cell column={column} draggingEnabled={false} {...restProps}>
                 <TableHeaderRow.Content column={column}> {updatedChildren} </TableHeaderRow.Content>
-                <IconButton title="Click to group"
-                            className={classes.button}
-                            onClick={onGroup}>
-                    <AddIcon/>
-                </IconButton>
+                <Tooltip title="Click to group">
+                    <IconButton
+                                className={classes.button}
+                                onClick={onGroup}>
+                        <AddIcon/>
+                    </IconButton>
+                </Tooltip>
             </TableHeaderRow.Cell>
         );
     } else if (column.name === 'Name' || column.name === 'Overall') {
@@ -39,13 +76,7 @@ const TableHeaderCellBase = ({column, children, classes, onGroup, groupingEnable
         return (
             <TableHeaderRow.Cell column={column} draggingEnabled={false} {...restProps}>
                 {column.title}
-                <IconButton
-                    title="Click to see legend"
-                    className={classes.button}
-                    onClick={() => alert('Help action')}
-                >
-                    <HelpOutlineIcon/>
-                </IconButton>
+                <PositionLegendButton/>
             </TableHeaderRow.Cell>
         )
     }

@@ -67,13 +67,13 @@ class Dashboard extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col sm="8">
+                    <Col sm="8" className="table-view">
                         <PlayerTable
                             data={this.state.playerData}
                             onSelectionChange={this.onSelectionChange}
                         />
                     </Col>
-                    <Col sm="4">
+                    <Col sm="4" className="player-view">
                         <PlayerCard player={this.state.selectedPlayers ? this.state.selectedPlayers[0]: undefined}/>
                     </Col>
                 </Row>

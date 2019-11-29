@@ -1,0 +1,80 @@
+.ground {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.midLine {
+    position: absolute;
+    width: 400px;
+    border: 1px solid black;
+    height: 0px;
+    margin-top: 200px;
+}
+
+.circle {
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 120px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.rect1 {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 120px;
+}
+
+.rect2 {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 120px;
+    margin-top: 350px;
+}
+
+.pos-row{
+    display: flex;
+    position: absolute;
+}
+
+.row1{
+    margin-left: 175px;
+    margin-top: 355px;
+}
+
+.row2{
+    margin-left: 50px;
+    margin-top: 300px;
+}
+
+.row3{
+    margin-top: 250px;
+}
+
+.row4{
+    margin-top: 180px;
+}
+
+.row5{
+    margin-top: 100px;
+}
+
+.row6{
+    margin-top: 30px;
+}
+
+.MuiAvatar-root.MuiAvatar-circle{
+    width: 40px;
+    height: 40px;
+}
