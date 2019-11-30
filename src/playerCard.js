@@ -12,6 +12,7 @@ class PlayerCard extends React.Component {
   constructor(props) {
     super(props);
     this.playerColor = ["red", "green"];
+    this.backgroundColor = ["antiqueWhite", "lavender", "white"]; //Player1, Player2, Default
     this.colormap = {
       GK: "orange",
       DEF: "blue",
@@ -61,46 +62,66 @@ class PlayerCard extends React.Component {
 
   //helper methods
   getPlayerCards = () => {
-    const background_color = ["antiqueWhite", "lavender"];
     if (this.state.players.length === 1) {
-      return this.getSinglePlayerView(background_color);
+      return this.getSinglePlayerView();
     } else if (this.state.players.length === 2) {
-      return this.getDoublePlayerView(background_color);
+      return this.getDoublePlayerView();
     }
   };
 
   //helper methods
   //view when single player is selected
-  getSinglePlayerView = background_color => {
-    const style_col = {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    };
-    const index = 0;
-    const player = this.state.players[index];
+  getSinglePlayerView = () => {
+    const style_col = [
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[0]
+      },
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[1]
+      },
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[2]
+      }
+    ];
+    const index = 2; //default color for background
+    const player_curr = this.state.players[0];
+    console.log(player_curr);
+    const overall = player_curr.Overall.props.children.props.children;
     return (
       <Col key={"player" + index} className="player-card">
-        <Card style={{ backgroundColor: background_color[index] }}>
+        <Card style={{ backgroundColor: this.backgroundColor[index] }}>
           <Grid container justify="center" alignItems="center">
             {/*/////////////Player Image//////////////*/}
-            <Avatar
-              src={
-                player && player.Image && player.Image !== "error"
-                  ? player.Image
-                  : avatarPlaceholder
-              }
-              onError={() => {
-                this.onError(index);
-              }}
-            />
+            <Col style={style_col[parseInt(player_curr.selectionIdx)]}>
+              <Avatar
+                src={
+                  player_curr &&
+                  player_curr.Image &&
+                  player_curr.Image !== "error"
+                    ? player_curr.Image
+                    : avatarPlaceholder
+                }
+                onError={() => {
+                  this.onError(0);
+                }}
+              />
+            </Col>
           </Grid>
           {/*/////////////Player Name and Country//////////////*/}
           <Grid container justify="center" alignItems="center">
             <CardHeader
               align="center"
-              title={player ? player.Name : "Player Name"}
-              subheader={player ? player.Country : "Country"}
+              title={player_curr ? player_curr.Name : "Player Name"}
+              subheader={player_curr ? player_curr.Country : "Country"}
             />
           </Grid>
           <Grid container justify="center" alignItems="center">
@@ -109,31 +130,33 @@ class PlayerCard extends React.Component {
               <Col sm="auto">
                 <Container>
                   <Row>
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <Typography
                         variant="body2"
                         color="textSecondary"
                         component="span"
                       >
-                        {player ? "Age: " + player.Age : "Player Age"}
+                        {player_curr ? "Age: " + player_curr.Age : "Player Age"}
                       </Typography>
                     </Col>
                   </Row>
                   <Row>
                     {/*/////////////Player Height//////////////*/}
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <Typography
                         variant="body2"
                         color="textSecondary"
                         component="span"
                       >
-                        {player ? "Height: " + player.Height : "Player Height"}
+                        {player_curr
+                          ? "Height: " + player_curr.Height
+                          : "Player Height"}
                       </Typography>
                     </Col>
                   </Row>
                   <Row>
                     {/*/////////////Player Position//////////////*/}
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <svg height="15" width="15">
                         <circle
                           className="player-comp-pos"
@@ -141,12 +164,12 @@ class PlayerCard extends React.Component {
                           cy="7.5"
                           r="7.5"
                           style={{
-                            fill: this.colormap[this.position[player.BP]]
+                            fill: this.colormap[this.position[player_curr.BP]]
                           }}
                         >
                           <title>
-                            {player
-                              ? "Position: " + this.position[player.BP]
+                            {player_curr
+                              ? "Position: " + this.position[player_curr.BP]
                               : "Position"}
                           </title>
                         </circle>
@@ -156,24 +179,32 @@ class PlayerCard extends React.Component {
                         color="textSecondary"
                         component="span"
                       >
-                        {player ? player.Position : "Player Position"}
+                        {player_curr ? player_curr.Position : "Player Position"}
                       </Typography>
                     </Col>
                   </Row>
                   <Row>
                     {/*/////////////Player Foot//////////////*/}
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <img
-                        src={this.getImage(player.foot)}
-                        alt={player ? "Foot: " + player.foot : "Player Foot"}
-                        title={player ? "Foot: " + player.foot : "Player Foot"}
+                        src={this.getImage(player_curr.foot)}
+                        alt={
+                          player_curr
+                            ? "Foot: " + player_curr.foot
+                            : "Player Foot"
+                        }
+                        title={
+                          player_curr
+                            ? "Foot: " + player_curr.foot
+                            : "Player Foot"
+                        }
                         style={{ height: "40px", width: "72px" }}
                       />
                     </Col>
                   </Row>
                   <Row>
                     {/*/////////////Player Weak Foot//////////////*/}
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <Typography
                         variant="body2"
                         color="textSecondary"
@@ -182,7 +213,7 @@ class PlayerCard extends React.Component {
                         {"Weak Foot"}
                       </Typography>
                       <StarRatings
-                        rating={parseInt(player["W/F"])}
+                        rating={parseInt(player_curr["W/F"])}
                         starRatedColor="gold"
                         starEmptyColot="gray"
                         numberOfStars={5}
@@ -194,7 +225,7 @@ class PlayerCard extends React.Component {
                   </Row>
                   <Row>
                     {/*/////////////Player Skill Moves//////////////*/}
-                    <Col style={style_col}>
+                    <Col style={style_col[index]}>
                       <Typography
                         variant="body2"
                         color="textSecondary"
@@ -203,7 +234,7 @@ class PlayerCard extends React.Component {
                         {"Skill Moves"}
                       </Typography>
                       <StarRatings
-                        rating={parseInt(player["SM"])}
+                        rating={parseInt(player_curr["SM"])}
                         starRatedColor="gold"
                         starEmptyColot="gray"
                         numberOfStars={5}
@@ -227,53 +258,53 @@ class PlayerCard extends React.Component {
                 />
                 */}
                 <PlayerBar
-                  data={player.Overall}
+                  data={overall}
                   label="Overall"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.PAC}
+                  data={player_curr.PAC}
                   label="Pace"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.SHO}
+                  data={player_curr.SHO}
                   label="Shooting"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.PAS}
+                  data={player_curr.PAS}
                   label="Passing"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.DRI}
+                  data={player_curr.DRI}
                   label="Dribbling"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.DEF}
+                  data={player_curr.DEF}
                   label="Defending"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
                 <PlayerBar
-                  data={player.PHY}
+                  data={player_curr.PHY}
                   label="Physical"
                   showLabel={true}
                   rotateBar={false}
-                  color={this.playerColor[index]}
+                  color={this.playerColor[0]}
                 />
               </Col>
             </Row>
@@ -283,36 +314,55 @@ class PlayerCard extends React.Component {
     );
   };
 
-  getDoublePlayerView = background_color => {
-    const style_col = {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    };
-    const index = 0;
-    const player = this.state.players;
+  getDoublePlayerView = () => {
+    const style_col = [
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[0]
+      },
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[1]
+      },
+      {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: this.backgroundColor[2]
+      }
+    ];
+    const index = 2; //default color to background
+    const player_curr = this.state.players;
     return (
       <Col key={"player" + index} className="player-card">
-        <Card style={{ backgroundColor: background_color[index] }}>
+        <Card style={{ backgroundColor: this.backgroundColor[index] }}>
           <Grid container justify="center" alignItems="center">
-            <Col style={style_col}>
+            <Col style={style_col[parseInt(player_curr[0].selectionIdx)]}>
               {/*/////////////Player Image//////////////*/}
               <Avatar
                 src={
-                  player[0] && player[0].Image && player[0].Image !== "error"
-                    ? player[0].Image
+                  player_curr[0] &&
+                  player_curr[0].Image &&
+                  player_curr[0].Image !== "error"
+                    ? player_curr[0].Image
                     : avatarPlaceholder
                 }
                 onError={() => {
-                  this.onError(index);
+                  this.onError(0);
                 }}
               />
             </Col>
-            <Col style={style_col}>
+            <Col style={style_col[parseInt(player_curr[1].selectionIdx)]}>
               <Avatar
                 src={
-                  player[1] && player[1].Image && player[1].Image !== "error"
-                    ? player[1].Image
+                  player_curr[1] &&
+                  player_curr[1].Image &&
+                  player_curr[1].Image !== "error"
+                    ? player_curr[1].Image
                     : avatarPlaceholder
                 }
                 onError={() => {
@@ -323,18 +373,18 @@ class PlayerCard extends React.Component {
           </Grid>
           {/*/////////////Player Name and Country//////////////*/}
           <Grid container justify="center" alignItems="center">
-            <Col style={style_col}>
+            <Col style={style_col[2]}>
               <CardHeader
                 align="center"
-                title={player[0] ? player[0].Name : "Player Name"}
-                subheader={player[0] ? player[0].Country : "Country"}
+                title={player_curr[0] ? player_curr[0].Name : "Player Name"}
+                subheader={player_curr[0] ? player_curr[0].Country : "Country"}
               />
             </Col>
-            <Col style={style_col}>
+            <Col style={style_col[2]}>
               <CardHeader
                 align="center"
-                title={player[1] ? player[1].Name : "Player Name"}
-                subheader={player[1] ? player[1].Country : "Country"}
+                title={player_curr[1] ? player_curr[1].Name : "Player Name"}
+                subheader={player_curr[1] ? player_curr[1].Country : "Country"}
               />
             </Col>
           </Grid>
@@ -342,53 +392,53 @@ class PlayerCard extends React.Component {
             <Container>
               <Row>
                 {/*/////////////Player Age//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="span"
                   >
-                    {player[0] ? player[0].Age : "Player Age"}
+                    {player_curr[0] ? player_curr[0].Age : "Player Age"}
                   </Typography>
                 </Col>
-                <Col style={style_col}>Age</Col>
+                <Col style={style_col[2]}>Age</Col>
                 {/*/////////////Player Age//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="span"
                   >
-                    {player[1] ? player[1].Age : "Player Age"}
+                    {player_curr[1] ? player_curr[1].Age : "Player Age"}
                   </Typography>
                 </Col>
               </Row>
               <Row>
                 {/*/////////////Player Height//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="span"
                   >
-                    {player[0] ? player[0].Height : "Playe Height"}
+                    {player_curr[0] ? player_curr[0].Height : "Playe Height"}
                   </Typography>
                 </Col>
-                <Col style={style_col}>Height</Col>
+                <Col style={style_col[2]}>Height</Col>
                 {/*/////////////Player Height//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="span"
                   >
-                    {player[1] ? player[1].Height : "Playe Height"}
+                    {player_curr[1] ? player_curr[1].Height : "Playe Height"}
                   </Typography>
                 </Col>
               </Row>
               <Row>
                 {/*/////////////Player Position//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <svg height="15" width="15">
                     <circle
                       className="player-comp-pos"
@@ -396,12 +446,12 @@ class PlayerCard extends React.Component {
                       cy="7.5"
                       r="7.5"
                       style={{
-                        fill: this.colormap[this.position[player[0].BP]]
+                        fill: this.colormap[this.position[player_curr[0].BP]]
                       }}
                     >
                       <title>
-                        {player[0]
-                          ? "Position: " + this.position[player[0].BP]
+                        {player_curr[0]
+                          ? "Position: " + this.position[player_curr[0].BP]
                           : "Position"}
                       </title>
                     </circle>
@@ -411,12 +461,14 @@ class PlayerCard extends React.Component {
                     color="textSecondary"
                     component="span"
                   >
-                    {player[0] ? player[0].Position : "Player Position"}
+                    {player_curr[0]
+                      ? player_curr[0].Position
+                      : "Player Position"}
                   </Typography>
                 </Col>
-                <Col style={style_col}>Position</Col>
+                <Col style={style_col[2]}>Position</Col>
                 {/*/////////////Player Position//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <svg height="15" width="15">
                     <circle
                       className="player-comp-pos"
@@ -424,12 +476,12 @@ class PlayerCard extends React.Component {
                       cy="7.5"
                       r="7.5"
                       style={{
-                        fill: this.colormap[this.position[player[1].BP]]
+                        fill: this.colormap[this.position[player_curr[1].BP]]
                       }}
                     >
                       <title>
-                        {player[1]
-                          ? "Position: " + this.position[player[1].BP]
+                        {player_curr[1]
+                          ? "Position: " + this.position[player_curr[1].BP]
                           : "Position"}
                       </title>
                     </circle>
@@ -439,30 +491,44 @@ class PlayerCard extends React.Component {
                     color="textSecondary"
                     component="span"
                   >
-                    {player[1] ? player[1].Position : "Player Position"}
+                    {player_curr[1]
+                      ? player_curr[1].Position
+                      : "Player Position"}
                   </Typography>
                 </Col>
               </Row>
               <Row>
                 {/*/////////////Player Foot//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <img
-                    src={this.getImage(player[0].foot)}
-                    alt={player[0] ? "Foot: " + player[0].foot : "Player Foot"}
+                    src={this.getImage(player_curr[0].foot)}
+                    alt={
+                      player_curr[0]
+                        ? "Foot: " + player_curr[0].foot
+                        : "Player Foot"
+                    }
                     title={
-                      player[0] ? "Foot: " + player[0].foot : "Player Foot"
+                      player_curr[0]
+                        ? "Foot: " + player_curr[0].foot
+                        : "Player Foot"
                     }
                     style={{ height: "30px", width: "54px" }}
                   />
                 </Col>
-                <Col style={style_col}>Foot</Col>
+                <Col style={style_col[2]}>Foot</Col>
                 {/*/////////////Player Foot//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <img
-                    src={this.getImage(player[1].foot)}
-                    alt={player[1] ? "Foot: " + player[1].foot : "Player Foot"}
+                    src={this.getImage(player_curr[1].foot)}
+                    alt={
+                      player_curr[1]
+                        ? "Foot: " + player_curr[1].foot
+                        : "Player Foot"
+                    }
                     title={
-                      player[1] ? "Foot: " + player[1].foot : "Player Foot"
+                      player_curr[1]
+                        ? "Foot: " + player_curr[1].foot
+                        : "Player Foot"
                     }
                     style={{ height: "30px", width: "54px" }}
                   />
@@ -470,9 +536,9 @@ class PlayerCard extends React.Component {
               </Row>
               <Row>
                 {/*/////////////Player Weak Foot//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={parseInt(player[0]["W/F"])}
+                    rating={parseInt(player_curr[0]["W/F"])}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={5}
@@ -481,11 +547,11 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="0 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Weak Foot</Col>
+                <Col style={style_col[2]}>Weak Foot</Col>
                 {/*/////////////Player Weak Foot//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={parseInt(player[1]["W/F"])}
+                    rating={parseInt(player_curr[1]["W/F"])}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={5}
@@ -497,9 +563,9 @@ class PlayerCard extends React.Component {
               </Row>
               <Row>
                 {/*/////////////Player Skill Moves//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={parseInt(player[0]["SM"])}
+                    rating={parseInt(player_curr[0]["SM"])}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={5}
@@ -508,11 +574,11 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Skill Moves</Col>
+                <Col style={style_col[2]}>Skill Moves</Col>
                 {/*/////////////Player Skill Moves//////////////*/}
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={parseInt(player[1]["SM"])}
+                    rating={parseInt(player_curr[1]["SM"])}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={5}
@@ -534,7 +600,7 @@ class PlayerCard extends React.Component {
                     color={this.playerColor[0]}
                   />
                 </Col>
-                <Col style={style_col}>Percentile</Col>
+                <Col style={style_col[2]}>Percentile</Col>
                 <Col>
                   <PlayerBar
                     data={this.getPercentile(1)}
@@ -547,16 +613,21 @@ class PlayerCard extends React.Component {
               </Row>
               */}
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].Overall}
+                    data={player_curr[0].Overall.props.children.props.children}
                     label="Overall"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].Overall >= player[1].Overall ? 1 : 0}
+                    rating={
+                      player_curr[0].Overall.props.children.props.children >=
+                      player_curr[1].Overall.props.children.props.children
+                        ? 1
+                        : 0
+                    }
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -565,10 +636,15 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Overall</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Overall</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].Overall <= player[1].Overall ? 1 : 0}
+                    rating={
+                      player_curr[0].Overall.props.children.props.children <=
+                      player_curr[1].Overall.props.children.props.children
+                        ? 1
+                        : 0
+                    }
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -577,7 +653,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].Overall}
+                    data={player_curr[1].Overall.props.children.props.children}
                     label="Overall"
                     showLabel={false}
                     rotateBar={false}
@@ -586,16 +662,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].PAC}
+                    data={player_curr[0].PAC}
                     label="Pace"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].PAC >= player[1].PAC ? 1 : 0}
+                    rating={player_curr[0].PAC >= player_curr[1].PAC ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -604,10 +680,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Pace</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Pace</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].PAC <= player[1].PAC ? 1 : 0}
+                    rating={player_curr[0].PAC <= player_curr[1].PAC ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -616,7 +692,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].PAC}
+                    data={player_curr[1].PAC}
                     label="Pace"
                     showLabel={false}
                     rotateBar={false}
@@ -625,16 +701,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].SHO}
+                    data={player_curr[0].SHO}
                     label="Shooting"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].SHO >= player[1].SHO ? 1 : 0}
+                    rating={player_curr[0].SHO >= player_curr[1].SHO ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -643,10 +719,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Shooting</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Shooting</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].SHO <= player[1].SHO ? 1 : 0}
+                    rating={player_curr[0].SHO <= player_curr[1].SHO ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -655,7 +731,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].SHO}
+                    data={player_curr[1].SHO}
                     label="Shooting"
                     showLabel={false}
                     rotateBar={false}
@@ -664,16 +740,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].PAS}
+                    data={player_curr[0].PAS}
                     label="Passing"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].PAS >= player[1].PAS ? 1 : 0}
+                    rating={player_curr[0].PAS >= player_curr[1].PAS ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -682,10 +758,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Passing</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Passing</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].PAS <= player[1].PAS ? 1 : 0}
+                    rating={player_curr[0].PAS <= player_curr[1].PAS ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -694,7 +770,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].PAS}
+                    data={player_curr[1].PAS}
                     label="Passing"
                     showLabel={false}
                     rotateBar={false}
@@ -703,16 +779,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].DRI}
+                    data={player_curr[0].DRI}
                     label="Dribbling"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].DRI >= player[1].DRI ? 1 : 0}
+                    rating={player_curr[0].DRI >= player_curr[1].DRI ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -721,10 +797,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Dribbling</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Dribbling</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].DRI <= player[1].DRI ? 1 : 0}
+                    rating={player_curr[0].DRI <= player_curr[1].DRI ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -733,7 +809,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].DRI}
+                    data={player_curr[1].DRI}
                     label="Dribbling"
                     showLabel={false}
                     rotateBar={false}
@@ -742,16 +818,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].DEF}
+                    data={player_curr[0].DEF}
                     label="Defending"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].DEF >= player[1].DEF ? 1 : 0}
+                    rating={player_curr[0].DEF >= player_curr[1].DEF ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -760,10 +836,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Defending</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Defending</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].DEF <= player[1].DEF ? 1 : 0}
+                    rating={player_curr[0].DEF <= player_curr[1].DEF ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -772,7 +848,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].DEF}
+                    data={player_curr[1].DEF}
                     label="Defending"
                     showLabel={false}
                     rotateBar={false}
@@ -781,16 +857,16 @@ class PlayerCard extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>
                   <PlayerBar
-                    data={player[0].PHY}
+                    data={player_curr[0].PHY}
                     label="Physical"
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
                   />
                   <StarRatings
-                    rating={player[0].PHY >= player[1].PHY ? 1 : 0}
+                    rating={player_curr[0].PHY >= player_curr[1].PHY ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -799,10 +875,10 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                 </Col>
-                <Col style={style_col}>Physical</Col>
-                <Col style={style_col}>
+                <Col style={style_col[2]}>Physical</Col>
+                <Col style={style_col[2]}>
                   <StarRatings
-                    rating={player[0].PHY <= player[1].PHY ? 1 : 0}
+                    rating={player_curr[0].PHY <= player_curr[1].PHY ? 1 : 0}
                     starRatedColor="gold"
                     starEmptyColot="gray"
                     numberOfStars={1}
@@ -811,7 +887,7 @@ class PlayerCard extends React.Component {
                     svgIconViewBox="5 5 51 48"
                   />
                   <PlayerBar
-                    data={player[1].PHY}
+                    data={player_curr[1].PHY}
                     label="Physical"
                     showLabel={false}
                     rotateBar={false}
@@ -825,198 +901,7 @@ class PlayerCard extends React.Component {
       </Col>
     );
   };
-  /*
-  //view when two players are selected
-  getDoublePlayerView = background_color => {
-    const style_col = {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    };
-    const player_cards = this.state.players.map(player => {
-      const index = this.state.players.indexOf(player);
-      return (
-        <Col key={"player" + index} className="player-card">
-          <Card style={{ backgroundColor: background_color[index] }}>
-            <Grid container justify="center" alignItems="center">
-              <Avatar
-                src={
-                  player && player.Image && player.Image !== "error"
-                    ? player.Image
-                    : avatarPlaceholder
-                }
-                onError={() => {
-                  this.onError(index);
-                }}
-              />
-            </Grid>
-            <Grid container justify="center" alignItems="center">
-              <CardHeader
-                align="center"
-                title={player ? player.Name : "Player Name"}
-                subheader={player ? player.Country : "Country"}
-                style={{}}
-              />
-            </Grid>
-            <Grid container justify="center" alignItems="center">
-              <Row>
-                <Col sm="auto">
-                  <Container>
-                    <Row>
-                      <Col style={style_col}>
-                        <Typography
-                          variant="body2"
-                          color="textSecondary"
-                          component="span"
-                        >
-                          {player ? "Age: " + player.Age : "Player Age"}
-                        </Typography>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col style={style_col}>
-                        <Typography
-                          variant="body2"
-                          color="textSecondary"
-                          component="span"
-                        >
-                          {player ? "Height: " + player.Height : "Player Age"}
-                        </Typography>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col style={style_col}>
-                        <svg height="15" width="15">
-                          <circle
-                            className="player-comp-pos"
-                            cx="7.5"
-                            cy="7.5"
-                            r="7.5"
-                            style={{
-                              fill: this.colormap[this.position[player.BP]]
-                            }}
-                          >
-                            <title>
-                              {player
-                                ? "Position: " + this.position[player.BP]
-                                : "Position"}
-                            </title>
-                          </circle>
-                        </svg>
-                        <Typography
-                          variant="body2"
-                          color="textSecondary"
-                          component="span"
-                        >
-                          {player ? player.Position : "Player Position"}
-                        </Typography>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col style={style_col}>
-                        <img
-                          src={this.getImage(player.foot)}
-                          alt={player ? "Foot: " + player.foot : "Player Foot"}
-                          title={
-                            player ? "Foot: " + player.foot : "Player Foot"
-                          }
-                          style={{ height: "40px", width: "72px" }}
-                        />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col style={style_col}>
-                        <Typography
-                          variant="body2"
-                          color="textSecondary"
-                          component="span"
-                        >
-                          {"Weak Foot"}
-                        </Typography>
-                        <StarRatings
-                          rating={parseInt(player["W/F"])}
-                          starRatedColor="gold"
-                          starEmptyColot="gray"
-                          numberOfStars={5}
-                          starDimension="20px"
-                          starSpacing="3px"
-                          svgIconViewBox="0 5 51 48"
-                        />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col style={style_col}>
-                        <Typography
-                          variant="body2"
-                          color="textSecondary"
-                          component="span"
-                        >
-                          {"Skill Moves"}
-                        </Typography>
-                        <StarRatings
-                          rating={parseInt(player["SM"])}
-                          starRatedColor="gold"
-                          starEmptyColot="gray"
-                          numberOfStars={5}
-                          starDimension="20px"
-                          starSpacing="3px"
-                          svgIconViewBox="5 5 51 48"
-                        />
-                      </Col>
-                    </Row>
-                  </Container>
-                </Col>
-                <Col>
-                  <PlayerBar
-                    data={this.getPercentile(index)}
-                    label="Percentile"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.Overall}
-                    label="Overall"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.PAC}
-                    label="Pace"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.SHO}
-                    label="Shooting"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.PAS}
-                    label="Passing"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.DRI}
-                    label="Dribbling"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.DEF}
-                    label="Defending"
-                    color={this.playerColor[index]}
-                  />
-                  <PlayerBar
-                    data={player.PHY}
-                    label="Physical"
-                    color={this.playerColor[index]}
-                  />
-                </Col>
-              </Row>
-            </Grid>
-          </Card>
-        </Col>
-      );
-    });
-    return player_cards;
-  };
-*/
+
   getImage = foot => {
     if (foot.toLowerCase() === "left") return leftFoot;
     else if (foot.toLowerCase() === "right") return rightFoot;
