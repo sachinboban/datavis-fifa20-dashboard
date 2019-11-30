@@ -1,10 +1,10 @@
 import React from "react";
 import "./css/playerBar.css";
+import Tooltip from '@material-ui/core/Tooltip';
 
 class PlayerBar extends React.Component {
   constructor(props) {
     super(props);
-    this.mousePos = [0, 0];
     this.state = {
       tooltip: false,
       label: undefined,
@@ -16,13 +16,13 @@ class PlayerBar extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener("mousemove", this.handleMouseMove);
     this.setState({
       label: this.props.label,
       showLabel: this.props.showLabel,
       rotateBar: this.props.rotateBar,
       color: this.props.color,
-      data: this.props.data
+      data: this.props.data,
+      tooltip: this.props.tooltip
     });
   }
 
@@ -33,7 +33,8 @@ class PlayerBar extends React.Component {
         showLabel: this.props.showLabel,
         rotateBar: this.props.rotateBar,
         color: this.props.color,
-        data: this.props.data
+        data: this.props.data,
+        tooltip: this.props.tooltip
       });
     }
   }
@@ -51,11 +52,10 @@ class PlayerBar extends React.Component {
           {this.state.showLabel && (
             <span className="player-bar-label">{this.state.data}</span>
           )}
+          <Tooltip title={this.state.data} disableFocusListener={!this.state.tooltip} disableHoverListener={!this.state.tooltip}>
           <svg
             className="player-bar-svg"
             style={style_svg}
-            onMouseEnter={() => this.handleTooltip(true)}
-            onMouseLeave={() => this.handleTooltip(false)}
           >
             <rect className="player-bar-rect-default" rx="10" ry="10"/>
             <rect
@@ -65,36 +65,16 @@ class PlayerBar extends React.Component {
               rx="10" ry="10"
             />
           </svg>
+          </Tooltip>
           {this.state.showLabel && (
             <span className="player-bar-label">{" " + this.state.label}</span>
-          )}
-          {this.state.tooltip && (
-            <div
-              className="player-bar-tooltip"
-              style={{
-                left: this.mousePos[0] - 10,
-                top: this.mousePos[1]
-              }}
-            >
-              <span>{this.state.data}</span>
-            </div>
           )}
         </div>
       );
     }
   };
-  //Tooltip
-  handleTooltip = request => {
-    const tooltip = request;
-    this.setState({
-      tooltip: tooltip
-    });
-  };
 
-  //positioning the tooltip
-  handleMouseMove = e => {
-    this.mousePos = [e.pageX, e.pageY];
-  };
+
 }
 
 export default PlayerBar;

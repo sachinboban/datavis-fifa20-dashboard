@@ -514,6 +514,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
+                    tooltip={true}
                   />
                   <StarRatings
                     rating={
@@ -552,6 +553,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={false}
                     color={this.playerColor[1]}
+                    tooltip={true}
                   />
                 </Col>
               </Row>
@@ -563,6 +565,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
+                    tooltip={true}
                   />
                   <StarRatings
                     rating={player_curr[0].PAC >= player_curr[1].PAC ? 1 : 0}
@@ -591,6 +594,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={false}
                     color={this.playerColor[1]}
+                    tooltip={true}
                   />
                 </Col>
               </Row>
@@ -758,6 +762,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={true}
                     color={this.playerColor[0]}
+                    tooltip={true}
                   />
                   <StarRatings
                     rating={player_curr[0].PHY >= player_curr[1].PHY ? 1 : 0}
@@ -786,6 +791,7 @@ class PlayerCard extends React.Component {
                     showLabel={false}
                     rotateBar={false}
                     color={this.playerColor[1]}
+                    tooltip={true}
                   />
                 </Col>
               </Row>
