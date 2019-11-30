@@ -7,6 +7,7 @@ import playerData from "./data/raw.csv";
 import leagueData from "./data/team-league.csv";
 import getBarChartJSX from "./barChart";
 import getPositionIndicator from "./positionIndicator";
+import RadarPlot from "./radarPlot";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -63,6 +64,14 @@ class Dashboard extends React.Component {
     });
   };
 
+  getOveralls = () => {
+    const overalls = this.state.playerData.map(d => {
+      return d.Overall;
+    });
+    overalls.sort();
+    return overalls;
+  };
+
   render() {
     return (
       <Container fluid>
@@ -75,12 +84,10 @@ class Dashboard extends React.Component {
           </Col>
           <Col sm="4" className="player-view">
             <PlayerCard
-              player={
-                this.state.selectedPlayers
-                  ? this.state.selectedPlayers[0]
-                  : undefined
-              }
+              overalls={this.getOveralls()}
+              players={this.state.selectedPlayers}
             />
+            <RadarPlot key="radar-plot" input={this.state.selectedPlayers} />
           </Col>
         </Row>
       </Container>

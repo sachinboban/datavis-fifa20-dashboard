@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/playerBar.css";
-import { transform } from "@babel/core";
 
 class PlayerBar extends React.Component {
   constructor(props) {
@@ -40,7 +39,6 @@ class PlayerBar extends React.Component {
   }
 
   render() {
-    console.log(this.state.tooltip);
     return <div>{this.displayBarChart()}</div>;
   }
 
@@ -51,7 +49,7 @@ class PlayerBar extends React.Component {
       return (
         <div>
           {this.state.showLabel && (
-            <text className="player-bar-label">{this.state.data}</text>
+            <span className="player-bar-label">{this.state.data}</span>
           )}
           <svg
             className="player-bar-svg"
@@ -67,7 +65,7 @@ class PlayerBar extends React.Component {
             />
           </svg>
           {this.state.showLabel && (
-            <text className="player-bar-label">{" " + this.state.label}</text>
+            <span className="player-bar-label">{" " + this.state.label}</span>
           )}
           {this.state.tooltip && (
             <div

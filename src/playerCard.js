@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-  Avatar,
-  Grid
-} from "@material-ui/core";
+import { Card, CardHeader, Typography, Avatar, Grid } from "@material-ui/core";
 import { Container, Row, Col } from "react-bootstrap";
 import StarRatings from "react-star-ratings";
 import PlayerBar from "./playerBar";

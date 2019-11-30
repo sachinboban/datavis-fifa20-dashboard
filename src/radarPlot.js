@@ -216,6 +216,8 @@ class RadarPlot extends Component {
           this.last_view = "ATT";
           attr = this.att_skills;
           break;
+        default:
+          break;
       }
     }
     [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
