@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, Typography, Avatar, Grid } from "@material-ui/core";
+import { Card, CardHeader, Typography, Avatar, Grid, Chip } from "@material-ui/core";
 import { Container, Row, Col } from "react-bootstrap";
 import StarRatings from "react-star-ratings";
 import PlayerBar from "./playerBar";
@@ -7,18 +7,14 @@ import avatarPlaceholder from "./img/avatar-placeholder.jpg";
 import leftFoot from "./img/left.png";
 import rightFoot from "./img/right.png";
 import bothFoot from "./img/both.png";
+import RadarPlot from "./radarPlot";
 
 class PlayerCard extends React.Component {
   constructor(props) {
     super(props);
     this.playerColor = ["red", "green"];
     this.backgroundColor = ["antiqueWhite", "lavender", "white"]; //Player1, Player2, Default
-    this.colormap = {
-      GK: "orange",
-      DEF: "blue",
-      MID: "green",
-      ATT: "red"
-    };
+
     this.position = {
       GK: "GK",
       CB: "DEF",
@@ -125,62 +121,29 @@ class PlayerCard extends React.Component {
             />
           </Grid>
           <Grid container justify="center" alignItems="center">
+            <RadarPlot key="radar-plot" input={this.state.players} />
+          </Grid>
+          <Grid container justify="center" alignItems="center" style={{marginTop: '-15%'}}>
             <Row>
               {/*/////////////Player Age//////////////*/}
               <Col sm="auto">
                 <Container>
                   <Row>
                     <Col style={style_col[index]}>
-                      <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="span"
-                      >
-                        {player_curr ? "Age: " + player_curr.Age : "Player Age"}
-                      </Typography>
+                      <Chip label=  {player_curr ? "Age: " + player_curr.Age : "Player Age"} />
                     </Col>
                   </Row>
-                  <Row>
+                  <Row style={{marginTop: 5}}>
                     {/*/////////////Player Height//////////////*/}
                     <Col style={style_col[index]}>
-                      <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="span"
-                      >
-                        {player_curr
-                          ? "Height: " + player_curr.Height
-                          : "Player Height"}
-                      </Typography>
+                      <Chip label= {player_curr  ? "Height: " + player_curr.Height
+                          : "Player Height"}/>
                     </Col>
                   </Row>
-                  <Row>
+                  <Row style={{marginTop: 5, height:30}}>
                     {/*/////////////Player Position//////////////*/}
                     <Col style={style_col[index]}>
-                      <svg height="15" width="15">
-                        <circle
-                          className="player-comp-pos"
-                          cx="7.5"
-                          cy="7.5"
-                          r="7.5"
-                          style={{
-                            fill: this.colormap[this.position[player_curr.BP]]
-                          }}
-                        >
-                          <title>
-                            {player_curr
-                              ? "Position: " + this.position[player_curr.BP]
-                              : "Position"}
-                          </title>
-                        </circle>
-                      </svg>
-                      <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="span"
-                      >
-                        {player_curr ? player_curr.Position : "Player Position"}
-                      </Typography>
+                      {player_curr.Pos}
                     </Col>
                   </Row>
                   <Row>
@@ -376,125 +339,56 @@ class PlayerCard extends React.Component {
             <Col style={style_col[2]}>
               <CardHeader
                 align="center"
-                title={player_curr[0] ? player_curr[0].Name : "Player Name"}
+                disableTypography={true}
+                title={<Typography variant="h6" style={{lineHeight: 1.2, fontSize:17, fontWeight:'bold'}}> {player_curr[0] ? player_curr[0].Name : "Player Name"} </Typography>}
                 subheader={player_curr[0] ? player_curr[0].Country : "Country"}
               />
             </Col>
             <Col style={style_col[2]}>
               <CardHeader
                 align="center"
-                title={player_curr[1] ? player_curr[1].Name : "Player Name"}
+                disableTypography={true}
+                title={<Typography variant="h6" style={{lineHeight: 1.2,fontSize:17, fontWeight:'bold'}}> {player_curr[1] ? player_curr[1].Name : "Player Name"} </Typography>}
                 subheader={player_curr[1] ? player_curr[1].Country : "Country"}
               />
             </Col>
           </Grid>
-          <Grid>
-            <Container>
+          <Grid container justify="center" alignItems="center" style={{marginTop: '-5%'}}>
+            <RadarPlot key="radar-plot" input={this.state.players} />
+          </Grid>
+          <Grid style={{marginTop: '-20%'}}>
+            <Container style={{fontSize: 14}}>
               <Row>
                 {/*/////////////Player Age//////////////*/}
                 <Col style={style_col[2]}>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[0] ? player_curr[0].Age : "Player Age"}
-                  </Typography>
+                  <Chip label=  {player_curr[0] ? player_curr[0].Age : "Player Age"} />
                 </Col>
                 <Col style={style_col[2]}>Age</Col>
                 {/*/////////////Player Age//////////////*/}
                 <Col style={style_col[2]}>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[1] ? player_curr[1].Age : "Player Age"}
-                  </Typography>
+                  <Chip label=  {player_curr[1] ? player_curr[1].Age : "Player Age"} />
                 </Col>
               </Row>
-              <Row>
+              <Row style={{marginTop: 5}}>
                 {/*/////////////Player Height//////////////*/}
                 <Col style={style_col[2]}>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[0] ? player_curr[0].Height : "Playe Height"}
-                  </Typography>
+                  <Chip label= {player_curr[0] ? player_curr[0].Height : "Player Height"}/>
                 </Col>
                 <Col style={style_col[2]}>Height</Col>
                 {/*/////////////Player Height//////////////*/}
                 <Col style={style_col[2]}>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[1] ? player_curr[1].Height : "Playe Height"}
-                  </Typography>
+                  <Chip label= {player_curr[1] ? player_curr[1].Height : "Player Height"}/>
                 </Col>
               </Row>
-              <Row>
+              <Row style={{marginTop: 5, height:30}}>
                 {/*/////////////Player Position//////////////*/}
                 <Col style={style_col[2]}>
-                  <svg height="15" width="15">
-                    <circle
-                      className="player-comp-pos"
-                      cx="7.5"
-                      cy="7.5"
-                      r="7.5"
-                      style={{
-                        fill: this.colormap[this.position[player_curr[0].BP]]
-                      }}
-                    >
-                      <title>
-                        {player_curr[0]
-                          ? "Position: " + this.position[player_curr[0].BP]
-                          : "Position"}
-                      </title>
-                    </circle>
-                  </svg>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[0]
-                      ? player_curr[0].Position
-                      : "Player Position"}
-                  </Typography>
+                  {player_curr[0].Pos}
                 </Col>
                 <Col style={style_col[2]}>Position</Col>
                 {/*/////////////Player Position//////////////*/}
                 <Col style={style_col[2]}>
-                  <svg height="15" width="15">
-                    <circle
-                      className="player-comp-pos"
-                      cx="7.5"
-                      cy="7.5"
-                      r="7.5"
-                      style={{
-                        fill: this.colormap[this.position[player_curr[1].BP]]
-                      }}
-                    >
-                      <title>
-                        {player_curr[1]
-                          ? "Position: " + this.position[player_curr[1].BP]
-                          : "Position"}
-                      </title>
-                    </circle>
-                  </svg>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="span"
-                  >
-                    {player_curr[1]
-                      ? player_curr[1].Position
-                      : "Player Position"}
-                  </Typography>
+                  {player_curr[1].Pos}
                 </Col>
               </Row>
               <Row>
@@ -700,162 +594,162 @@ class PlayerCard extends React.Component {
                   />
                 </Col>
               </Row>
-              <Row>
-                <Col style={style_col[2]}>
-                  <PlayerBar
-                    data={player_curr[0].SHO}
-                    label="Shooting"
-                    showLabel={false}
-                    rotateBar={true}
-                    color={this.playerColor[0]}
-                  />
-                  <StarRatings
-                    rating={player_curr[0].SHO >= player_curr[1].SHO ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                </Col>
-                <Col style={style_col[2]}>Shooting</Col>
-                <Col style={style_col[2]}>
-                  <StarRatings
-                    rating={player_curr[0].SHO <= player_curr[1].SHO ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                  <PlayerBar
-                    data={player_curr[1].SHO}
-                    label="Shooting"
-                    showLabel={false}
-                    rotateBar={false}
-                    color={this.playerColor[1]}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col style={style_col[2]}>
-                  <PlayerBar
-                    data={player_curr[0].PAS}
-                    label="Passing"
-                    showLabel={false}
-                    rotateBar={true}
-                    color={this.playerColor[0]}
-                  />
-                  <StarRatings
-                    rating={player_curr[0].PAS >= player_curr[1].PAS ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                </Col>
-                <Col style={style_col[2]}>Passing</Col>
-                <Col style={style_col[2]}>
-                  <StarRatings
-                    rating={player_curr[0].PAS <= player_curr[1].PAS ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                  <PlayerBar
-                    data={player_curr[1].PAS}
-                    label="Passing"
-                    showLabel={false}
-                    rotateBar={false}
-                    color={this.playerColor[1]}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col style={style_col[2]}>
-                  <PlayerBar
-                    data={player_curr[0].DRI}
-                    label="Dribbling"
-                    showLabel={false}
-                    rotateBar={true}
-                    color={this.playerColor[0]}
-                  />
-                  <StarRatings
-                    rating={player_curr[0].DRI >= player_curr[1].DRI ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                </Col>
-                <Col style={style_col[2]}>Dribbling</Col>
-                <Col style={style_col[2]}>
-                  <StarRatings
-                    rating={player_curr[0].DRI <= player_curr[1].DRI ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                  <PlayerBar
-                    data={player_curr[1].DRI}
-                    label="Dribbling"
-                    showLabel={false}
-                    rotateBar={false}
-                    color={this.playerColor[1]}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col style={style_col[2]}>
-                  <PlayerBar
-                    data={player_curr[0].DEF}
-                    label="Defending"
-                    showLabel={false}
-                    rotateBar={true}
-                    color={this.playerColor[0]}
-                  />
-                  <StarRatings
-                    rating={player_curr[0].DEF >= player_curr[1].DEF ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                </Col>
-                <Col style={style_col[2]}>Defending</Col>
-                <Col style={style_col[2]}>
-                  <StarRatings
-                    rating={player_curr[0].DEF <= player_curr[1].DEF ? 1 : 0}
-                    starRatedColor="gold"
-                    starEmptyColot="gray"
-                    numberOfStars={1}
-                    starDimension="20px"
-                    starSpacing="1px"
-                    svgIconViewBox="5 5 51 48"
-                  />
-                  <PlayerBar
-                    data={player_curr[1].DEF}
-                    label="Defending"
-                    showLabel={false}
-                    rotateBar={false}
-                    color={this.playerColor[1]}
-                  />
-                </Col>
-              </Row>
+              {/*<Row>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[0].SHO}*/}
+              {/*      label="Shooting"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={true}*/}
+              {/*      color={this.playerColor[0]}*/}
+              {/*    />*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].SHO >= player_curr[1].SHO ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*  <Col style={style_col[2]}>Shooting</Col>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].SHO <= player_curr[1].SHO ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[1].SHO}*/}
+              {/*      label="Shooting"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={false}*/}
+              {/*      color={this.playerColor[1]}*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*</Row>*/}
+              {/*<Row>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[0].PAS}*/}
+              {/*      label="Passing"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={true}*/}
+              {/*      color={this.playerColor[0]}*/}
+              {/*    />*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].PAS >= player_curr[1].PAS ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*  <Col style={style_col[2]}>Passing</Col>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].PAS <= player_curr[1].PAS ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[1].PAS}*/}
+              {/*      label="Passing"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={false}*/}
+              {/*      color={this.playerColor[1]}*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*</Row>*/}
+              {/*<Row>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[0].DRI}*/}
+              {/*      label="Dribbling"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={true}*/}
+              {/*      color={this.playerColor[0]}*/}
+              {/*    />*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].DRI >= player_curr[1].DRI ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*  <Col style={style_col[2]}>Dribbling</Col>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].DRI <= player_curr[1].DRI ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[1].DRI}*/}
+              {/*      label="Dribbling"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={false}*/}
+              {/*      color={this.playerColor[1]}*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*</Row>*/}
+              {/*<Row>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[0].DEF}*/}
+              {/*      label="Defending"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={true}*/}
+              {/*      color={this.playerColor[0]}*/}
+              {/*    />*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].DEF >= player_curr[1].DEF ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*  <Col style={style_col[2]}>Defending</Col>*/}
+              {/*  <Col style={style_col[2]}>*/}
+              {/*    <StarRatings*/}
+              {/*      rating={player_curr[0].DEF <= player_curr[1].DEF ? 1 : 0}*/}
+              {/*      starRatedColor="gold"*/}
+              {/*      starEmptyColot="gray"*/}
+              {/*      numberOfStars={1}*/}
+              {/*      starDimension="20px"*/}
+              {/*      starSpacing="1px"*/}
+              {/*      svgIconViewBox="5 5 51 48"*/}
+              {/*    />*/}
+              {/*    <PlayerBar*/}
+              {/*      data={player_curr[1].DEF}*/}
+              {/*      label="Defending"*/}
+              {/*      showLabel={false}*/}
+              {/*      rotateBar={false}*/}
+              {/*      color={this.playerColor[1]}*/}
+              {/*    />*/}
+              {/*  </Col>*/}
+              {/*</Row>*/}
               <Row>
                 <Col style={style_col[2]}>
                   <PlayerBar
@@ -903,8 +797,8 @@ class PlayerCard extends React.Component {
   };
 
   getImage = foot => {
-    if (foot.toLowerCase() === "left") return leftFoot;
-    else if (foot.toLowerCase() === "right") return rightFoot;
+    if (foot.toLowerCase() === "left") return rightFoot;
+    else if (foot.toLowerCase() === "right") return leftFoot;
     else return bothFoot;
   };
 

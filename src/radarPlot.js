@@ -72,6 +72,19 @@ class RadarPlot extends Component {
       MID: this.mid_skills,
       ATT: this.att_skills
     };
+
+    if(this.props.input.length > 0){
+      this.addEventListeners();
+      let [curr_data, captions] = this.getDataAndCaptions();
+      this.state = {
+        input: this.props.input,
+        data: curr_data,
+        captions: captions,
+        dot: {}
+      };
+    }else{
+        this.reset();
+    }
   }
 
   componentDidMount() {
@@ -83,12 +96,7 @@ class RadarPlot extends Component {
     let captions = [];
 
     //add click event listeners to captions
-    const caption_class = document.getElementsByClassName("caption");
-    if (caption_class.length !== 0) {
-      for (var ind = 0; ind < caption_class.length; ind++) {
-        caption_class[ind].addEventListener("click", this.handleMouseClick);
-      }
-    }
+    this.addEventListeners();
 
     //check for update
     if (prevProps.input !== this.props.input) {
@@ -96,46 +104,58 @@ class RadarPlot extends Component {
         this.reset();
         return;
       }
-
-      let attr;
-      if (this.props.input[0].BP === undefined) {
-        //set attributes for aggregate view
-        if (this.radar_mode === -1) this.radar_mode = 4;
-
-        if (this.radar_mode === 4) {
-          //select attributes for aggregate
-          attr = this.aggr_skills;
-          this.last_view = "";
-        } else if (this.radar_mode === 6) {
-          //select attributes based on last view
-          attr = this.skills[this.last_view];
-        }
-        [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
-      } else {
-        //set attributes for player view
-        if (this.radar_mode === -1) this.radar_mode = 6;
-
-        if (this.radar_mode === 4) {
-          //select attributes for aggregate
-          attr = this.aggr_skills;
-          this.last_view = "";
-        } else if (this.radar_mode === 6) {
-          if (this.last_view !== "") {
-            //select attributes based on last view
-            attr = this.skills[this.last_view];
-          } else {
-            //select attributes by position of input[0]
-            attr = this.skills[this.position[this.props.input[0].BP]];
-          }
-        }
-        [curr_data, captions] = [...this.getFormattedDataAndCaption(attr)];
-      }
-
+      [curr_data, captions] = this.getDataAndCaptions();
       this.setState({
         input: this.props.input,
         data: curr_data,
-        captions: captions
+        captions: captions,
+        dot: {}
       });
+    }
+  }
+
+  addEventListeners(){
+    const caption_class = document.getElementsByClassName("caption");
+    if (caption_class.length !== 0) {
+      for (var ind = 0; ind < caption_class.length; ind++) {
+        caption_class[ind].addEventListener("click", this.handleMouseClick);
+      }
+    }
+  }
+
+  getDataAndCaptions(){
+    let attr;
+    if (this.props.input[0].BP === undefined) {
+      //set attributes for aggregate view
+      if (this.radar_mode === -1) this.radar_mode = 4;
+
+      if (this.radar_mode === 4) {
+        //select attributes for aggregate
+        attr = this.aggr_skills;
+        this.last_view = "";
+      } else if (this.radar_mode === 6) {
+        //select attributes based on last view
+        attr = this.skills[this.last_view];
+      }
+      return [...this.getFormattedDataAndCaption(attr)];
+    } else {
+      //set attributes for player view
+      if (this.radar_mode === -1) this.radar_mode = 6;
+
+      if (this.radar_mode === 4) {
+        //select attributes for aggregate
+        attr = this.aggr_skills;
+        this.last_view = "";
+      } else if (this.radar_mode === 6) {
+        if (this.last_view !== "") {
+          //select attributes based on last view
+          attr = this.skills[this.last_view];
+        } else {
+          //select attributes by position of input[0]
+          attr = this.skills[this.position[this.props.input[0].BP]];
+        }
+      }
+      return [...this.getFormattedDataAndCaption(attr)];
     }
   }
 
@@ -154,7 +174,7 @@ class RadarPlot extends Component {
           <RadarChart
             captions={this.state.captions}
             data={this.state.data}
-            size={400}
+            size={300}
             options={{
               scales: 5,
               captionMargin: 10,

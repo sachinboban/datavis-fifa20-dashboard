@@ -35,7 +35,7 @@ export let colorMap = {
     }
 };
 
-let tooltip = {
+export let tooltip = {
     GK: "Goal Keeper",
     CB: "Center Back",
     LB: "Left Back",

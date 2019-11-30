@@ -71,6 +71,20 @@ th .MuiButtonBase-root{
   padding: 0;
 }
 
-.ground{
+.dash-container{
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
 
+.MuiTypography-body1 > .MuiBox-root{
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.player-view{
+  padding-left: 0 !important;
+}
+
+.player-card > .MuiPaper-root{
+  height: 624px;
 }

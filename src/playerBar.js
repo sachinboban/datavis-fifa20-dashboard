@@ -39,7 +39,7 @@ class PlayerBar extends React.Component {
   }
 
   render() {
-    return <div>{this.displayBarChart()}</div>;
+    return <div style={{marginTop:3}}>{this.displayBarChart()}</div>;
   }
 
   displayBarChart = () => {
@@ -57,11 +57,12 @@ class PlayerBar extends React.Component {
             onMouseEnter={() => this.handleTooltip(true)}
             onMouseLeave={() => this.handleTooltip(false)}
           >
-            <rect className="player-bar-rect-default" />
+            <rect className="player-bar-rect-default" rx="10" ry="10"/>
             <rect
               className="player-bar-rect"
               width={this.state.data + "px"}
               style={{ fill: this.state.color }}
+              rx="10" ry="10"
             />
           </svg>
           {this.state.showLabel && (

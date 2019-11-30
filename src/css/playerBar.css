@@ -31,7 +31,9 @@
 }
 
 .player-bar-label {
-  font-size: 15px;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 .player-bar-tooltip {
   position: fixed;

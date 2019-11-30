@@ -84,12 +84,12 @@ const TableHeaderCellBase = ({column, children, classes, onGroup, groupingEnable
 
 const selectionStyles = {
     selection0: {
-        backgroundColor: 'linen',
-        boxShadow: '#777 1px 1px 4px'
+        backgroundColor: 'antiqueWhite',
+        boxShadow: '#ccc 1px 1px 4px'
     },
     selection1: {
         backgroundColor: 'lavender',
-        boxShadow: '#777 1px 1px 4px'
+        boxShadow: '#ccc 1px 1px 4px'
     }
 };
 
