@@ -106,19 +106,6 @@ function Navbar() {
                         >
                             Demo video
                         </Button>
-
-                        <Link href="https://github.com/sachinboban/datavis-fifa20-dashboard" target="_blank"
-                              rel="noopener">
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                className={classes.button}
-                                endIcon={<LinkIcon/>}
-                                style={{backgroundColor: '#1976d2'}}
-                            >
-                                Github repo
-                            </Button>
-                        </Link>
                     </div>
                 </Toolbar>
             </AppBar>
