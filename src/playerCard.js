@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardHeader, Typography, Avatar, Grid, Chip } from "@material-ui/core";
+import { Card, CardHeader, Typography, Avatar, Grid, Chip, CardContent } from "@material-ui/core";
 import { Container, Row, Col } from "react-bootstrap";
 import StarRatings from "react-star-ratings";
 import PlayerBar from "./playerBar";
@@ -62,7 +62,43 @@ class PlayerCard extends React.Component {
       return this.getSinglePlayerView();
     } else if (this.state.players.length === 2) {
       return this.getDoublePlayerView();
+    }else{
+      return this.renderHelpInfo();
     }
+  };
+
+  renderHelpInfo = () => {
+    return (
+        <Col>
+          <Card>
+            <Grid container justify="center" alignItems="center">
+              <CardHeader align="center"
+                          title="Welcome to FIFA 20 Dashboard!">
+              </CardHeader>
+            </Grid>
+            <Grid>
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="span">
+                  <h5>Player Information</h5>
+                  <ul>
+                    <li>To see details of a player, click on any of the players on the left.</li>
+                    <li>Select any two players to compare them</li>
+                  </ul>
+
+                  <h5>Table Manipulation</h5>
+                  <ul>
+                    <li>Click on the arrow next to column headers to sort the table in ascending/
+                      descending order.
+                    </li>
+                    <li>Click on the plus icon next to column header to group by that column
+                    </li>
+                  </ul>
+                </Typography>
+              </CardContent>
+            </Grid>
+          </Card>
+        </Col>
+    );
   };
 
   //helper methods

@@ -7,9 +7,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 import Dashboard from "./dashboard";
 import Story from "./story";
-import {Row, Col} from 'react-bootstrap';
+import LinkIcon from '@material-ui/icons/Link';
 import fifaLogo from './img/fifa-logo.png';
 import SwipeableViews from 'react-swipeable-views';
 
@@ -58,6 +60,9 @@ const useStyles = makeStyles(theme => ({
         height: 60,
         display: 'inline-block'
     },
+    button: {
+        margin: theme.spacing(1),
+    }
 }));
 
 function Navbar() {
@@ -77,17 +82,44 @@ function Navbar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <Row>
-                        <Col sm="3">
-                            <img alt="" width="100px" src={fifaLogo}/>
-                        </Col>
-                        <Col sm="9">
-                            <Tabs value={value} onChange={handleChange}>
-                                <Tab label="Dashboard" {...tabProps(0)} />
-                                <Tab label="Story" {...tabProps(1)} />
-                            </Tabs>
-                        </Col>
-                    </Row>
+                    <img alt="" width="100px" src={fifaLogo}/>
+                    <Tabs value={value} onChange={handleChange} style={{flex: 1, marginLeft: 10}}>
+                        <Tab label="Dashboard" {...tabProps(0)} />
+                        <Tab label="Story" {...tabProps(1)} />
+                    </Tabs>
+                    <div>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classes.button}
+                            endIcon={<LinkIcon/>}
+                            style={{backgroundColor: '#1976d2'}}
+                        >
+                            Process Book
+                        </Button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classes.button}
+                            endIcon={<LinkIcon/>}
+                            style={{backgroundColor: '#1976d2'}}
+                        >
+                            Demo video
+                        </Button>
+
+                        <Link href="https://github.com/sachinboban/datavis-fifa20-dashboard" target="_blank"
+                              rel="noopener">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                className={classes.button}
+                                endIcon={<LinkIcon/>}
+                                style={{backgroundColor: '#1976d2'}}
+                            >
+                                Github repo
+                            </Button>
+                        </Link>
+                    </div>
                 </Toolbar>
             </AppBar>
             <SwipeableViews

@@ -40,10 +40,6 @@ button:focus {
   margin-left: 20px;
 }
 
-.MuiTabs-fixed {
-  padding-top: 10px;
-}
-
 .MuiTab-textColorInherit.Mui-selected {
   font-weight: bolder;
 }
@@ -87,4 +83,8 @@ th .MuiButtonBase-root{
 
 .player-card > .MuiPaper-root{
   height: 624px;
+}
+
+.MuiLink-underlineHover:hover{
+  text-decoration: none !important;
 }
