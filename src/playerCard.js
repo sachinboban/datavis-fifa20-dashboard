@@ -339,7 +339,7 @@ class PlayerCard extends React.Component {
     return (
       <Col key={"player" + index} className="player-card">
         <Card style={{ backgroundColor: this.backgroundColor[index] }}>
-          <Grid container justify="center" alignItems="center">
+          <Grid container justify="center" alignItems="center" className="player-card-head">
             <Col style={style_col[parseInt(player_curr[0].selectionIdx)]}>
               {/*/////////////Player Image//////////////*/}
               <Avatar
@@ -405,7 +405,7 @@ class PlayerCard extends React.Component {
                   <Chip label=  {player_curr[1] ? player_curr[1].Age : "Player Age"} />
                 </Col>
               </Row>
-              <Row style={{marginTop: 5}}>
+              <Row style={{marginTop: 5}} className="height-comp">
                 {/*/////////////Player Height//////////////*/}
                 <Col style={style_col[2]}>
                   <Chip label= {player_curr[0] ? player_curr[0].Height : "Player Height"}/>
@@ -464,7 +464,7 @@ class PlayerCard extends React.Component {
                   />
                 </Col>
               </Row>
-              <Row>
+              <Row className="foot-comp">
                 {/*/////////////Player Weak Foot//////////////*/}
                 <Col style={style_col[2]}>
                   <StarRatings
@@ -790,7 +790,7 @@ class PlayerCard extends React.Component {
               {/*    />*/}
               {/*  </Col>*/}
               {/*</Row>*/}
-              <Row>
+              <Row className="physical-comp">
                 <Col style={style_col[2]}>
                   <PlayerBar
                     data={player_curr[0].PHY}

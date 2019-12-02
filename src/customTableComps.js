@@ -104,6 +104,7 @@ export const TableSelectionRow = ({tableRow, onToggle, ...restProps}) => {
             style={{
                 ...selectionStyles['selection' + tableRow.row.selectionIdx],
             }}
+            className={tableRow.row.selectionIdx !== undefined ? "selected-row-" + tableRow.row.selectionIdx : ""}
         />
     );
 };

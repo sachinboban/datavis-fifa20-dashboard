@@ -92,7 +92,44 @@ class PlayerTable extends React.Component {
                 isLegendDiaglogOpen: false
             });
         }
+
+        if(prevProps.isDemoOn !== this.props.isDemoOn){
+            if(this.props.isDemoOn){
+                this.setDemoSelection();
+            }else{
+                this.resetDemoSelection();
+            }
+        }
     }
+    setDemoSelection = () => {
+        let rows = [...this.state.rows];
+        for(let index of this.state.selection){
+            rows[index].selectionIdx = undefined;
+        }
+        this.setState({
+            rows: rows,
+            columns: this.state.columns,
+            selection: [],
+            dataLoadComplete: this.state.dataLoadComplete,
+            isLegendDiaglogOpen: this.state.isLegendDiaglogOpen
+        });
+        this.onSelectionChange([1]);
+        this.onSelectionChange([1,0]);
+    };
+
+    resetDemoSelection = () => {
+        let rows = [...this.state.rows];
+        rows[0].selectionIdx = undefined;
+        rows[1].selectionIdx = undefined;
+        this.setState({
+            rows: rows,
+            columns: this.state.columns,
+            selection: [],
+            dataLoadComplete: this.state.dataLoadComplete,
+            isLegendDiaglogOpen: this.state.isLegendDiaglogOpen
+        });
+        this.notifyPlayerSelection([]);
+    };
 
     onSelectionChange = selection => {
         let rows = [...this.state.rows];
@@ -118,9 +155,16 @@ class PlayerTable extends React.Component {
             isLegendDiaglogOpen: this.state.isLegendDiaglogOpen
         });
         //notify other views about selection change
+        this.notifyPlayerSelection(selection);
+    };
+
+    notifyPlayerSelection = (selection) => {
         let selectedPlayers = [];
         for (let index of selection) {
             selectedPlayers.push(this.state.rows[index]);
+        }
+        if(selectedPlayers.length > 1){
+            selectedPlayers.sort((a,b) => a.selectionIdx - b.selectionIdx);
         }
         this.props.onSelectionChange(selectedPlayers);
     };
@@ -134,7 +178,7 @@ class PlayerTable extends React.Component {
 
                     <Grid rows={this.state.rows} columns={this.state.columns}>
                         <SortingState
-                            defaultSorting={[{columnName: "Name", direction: "asc"}]}
+                            defaultSorting={[{columnName: "Overall", direction: "desc"}]}
                             columnExtensions={this.sortingState}
                         />
                         <IntegratedSorting/>

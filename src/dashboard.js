@@ -79,6 +79,7 @@ class Dashboard extends React.Component {
             <PlayerTable
               data={this.state.playerData}
               onSelectionChange={this.onSelectionChange}
+              isDemoOn = {this.props.isDemoOn}
             />
           </Col>
           <Col sm="4" className="player-view">

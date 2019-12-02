@@ -8,12 +8,12 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Dashboard from "./dashboard";
 import Story from "./story";
 import LinkIcon from '@material-ui/icons/Link';
 import fifaLogo from './img/fifa-logo.png';
 import SwipeableViews from 'react-swipeable-views';
+import IntroTour from "./introTour";
 
 function TabPanel(props) {
     const {children, value, index, ...other} = props;
@@ -65,11 +65,13 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+
 function Navbar() {
 
     const classes = useStyles();
     const theme = useTheme();
     const [value, setValue] = React.useState(0);
+    const [isTourOpen, setIsTourOpen] = React.useState(false);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -78,6 +80,15 @@ function Navbar() {
     const handleChangeIndex = index => {
         setValue(index);
     };
+
+    const handleOpenTour = () => {
+        setIsTourOpen(true);
+    };
+
+    const handleCloseTour = () => {
+        setIsTourOpen(false);
+    };
+
     return (
         <div className={classes.root}>
             <AppBar position="static">
@@ -85,9 +96,18 @@ function Navbar() {
                     <img alt="" width="100px" src={fifaLogo}/>
                     <Tabs value={value} onChange={handleChange} style={{flex: 1, marginLeft: 10}}>
                         <Tab label="Dashboard" {...tabProps(0)} />
-                        <Tab label="Story" {...tabProps(1)} />
+                        {/*<Tab label="Story" {...tabProps(1)} />*/}
                     </Tabs>
                     <div>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classes.button}
+                            style={{backgroundColor: '#1976d2'}}
+                            onClick={handleOpenTour}
+                        >
+                            Story view
+                        </Button>
                         <Button
                             variant="contained"
                             color="primary"
@@ -115,12 +135,13 @@ function Navbar() {
                 onChangeIndex={handleChangeIndex}
             >
                 <TabPanel value={value} index={0}>
-                    <Dashboard/>
+                    <Dashboard isDemoOn={isTourOpen}/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <Story/>
                 </TabPanel>
             </SwipeableViews>
+           <IntroTour isTourOpen={isTourOpen} closeTour={handleCloseTour}/>
         </div>
     );
 }
