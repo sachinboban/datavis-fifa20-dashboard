@@ -42,7 +42,6 @@ Navigate to [localhost:3000/][localhost] on your browser to view the app.
 [doc-prop]: docs/proposal.md
 [doc-proc-bk]: docs/process_book.pdf
 [raw-data]: src/data/raw.csv
-[data-src]: https://www.kaggle.com/sagunsh/fifa-20-complete-player-dataset
 [video-demo]: https://www.youtube.com/watch?v=ryY7GoNn4Dk&feature=youtu.be
 [localhost]: localhost:3000/
 [proj-website]: https://laknaren16.github.io/fifa20-dashboard/index.html
