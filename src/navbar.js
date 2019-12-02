@@ -14,6 +14,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import fifaLogo from './img/fifa-logo.png';
 import SwipeableViews from 'react-swipeable-views';
 import IntroTour from "./introTour";
+import Link from "@material-ui/core/Link";
 
 function TabPanel(props) {
     const {children, value, index, ...other} = props;
@@ -108,24 +109,28 @@ function Navbar() {
                         >
                             Story view
                         </Button>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            className={classes.button}
-                            endIcon={<LinkIcon/>}
-                            style={{backgroundColor: '#1976d2'}}
-                        >
-                            Process Book
-                        </Button>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            className={classes.button}
-                            endIcon={<LinkIcon/>}
-                            style={{backgroundColor: '#1976d2'}}
-                        >
-                            Demo video
-                        </Button>
+                        <Link href="https://github.com/sachinboban/datavis-fifa20-dashboard/blob/master/docs/process_book.pdf" target="_blank" rel="noreferrer">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                className={classes.button}
+                                endIcon={<LinkIcon/>}
+                                style={{backgroundColor: '#1976d2'}}
+                            >
+                                Process Book
+                            </Button>
+                        </Link>
+                        <Link href="https://www.youtube.com/watch?v=ryY7GoNn4Dk&feature=youtu.be" target="_blank" rel="noreferrer">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                className={classes.button}
+                                endIcon={<LinkIcon/>}
+                                style={{backgroundColor: '#1976d2'}}
+                            >
+                                Demo video
+                            </Button>
+                        </Link>
                     </div>
                 </Toolbar>
             </AppBar>
@@ -141,7 +146,7 @@ function Navbar() {
                     <Story/>
                 </TabPanel>
             </SwipeableViews>
-           <IntroTour isTourOpen={isTourOpen} closeTour={handleCloseTour}/>
+            <IntroTour isTourOpen={isTourOpen} closeTour={handleCloseTour}/>
         </div>
     );
 }
