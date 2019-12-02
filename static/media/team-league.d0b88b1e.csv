@@ -1,0 +1,670 @@
+Name,League,ATT,MID,DEF,OVR,Logo
+FC Barcelona,LaLiga Santander,90,85,85,86,/static/FIFA20/images/crest/5/light/241.webp
+Real Madrid,LaLiga Santander,86,87,86,86,/static/FIFA20/images/crest/5/light/243.webp
+Manchester City,Premier League,86,87,83,86,/static/FIFA20/images/crest/5/light/10.webp
+FC Bayern München,Bundesliga,90,84,83,85,/static/FIFA20/images/crest/5/light/21.webp
+Paris Saint-Germain,Ligue 1 Conforama,87,85,83,85,/static/FIFA20/images/crest/5/light/73.webp
+Juventus,Serie A TIM,86,84,83,85,/static/FIFA20/images/crest/5/light/notfound.png
+Liverpool,Premier League,86,83,84,84,/static/FIFA20/images/crest/5/light/notfound.png
+Tottenham Hotspur,Premier League,86,82,83,83,/static/FIFA20/images/crest/5/light/notfound.png
+Atlético Madrid,LaLiga Santander,82,82,81,83,/static/FIFA20/images/crest/5/light/notfound.png
+Napoli,Serie A TIM,84,84,81,82,/static/FIFA20/images/crest/5/light/notfound.png
+Borussia Dortmund,Bundesliga,82,83,83,82,/static/FIFA20/images/crest/5/light/notfound.png
+Arsenal,Premier League,86,82,79,81,/static/FIFA20/images/crest/5/light/notfound.png
+Manchester United,Premier League,83,80,80,81,/static/FIFA20/images/crest/5/light/notfound.png
+Inter,Serie A TIM,83,79,86,81,/static/FIFA20/images/crest/5/light/notfound.png
+Valencia CF,LaLiga Santander,81,81,80,81,/static/FIFA20/images/crest/5/light/notfound.png
+Chelsea,Premier League,79,82,79,81,/static/FIFA20/images/crest/5/light/notfound.png
+Real Betis,LaLiga Santander,82,82,78,80,/static/FIFA20/images/crest/5/light/notfound.png
+Lazio,Serie A TIM,81,81,80,80,/static/FIFA20/images/crest/5/light/notfound.png
+Bayer 04 Leverkusen,Bundesliga,81,81,79,80,/static/FIFA20/images/crest/5/light/notfound.png
+Milan,Serie A TIM,80,80,79,80,/static/FIFA20/images/crest/5/light/notfound.png
+Roma,Serie A TIM,80,78,80,80,/static/FIFA20/images/crest/5/light/notfound.png
+Atalanta,Serie A TIM,82,78,78,79,/static/FIFA20/images/crest/5/light/notfound.png
+RB Leipzig,Bundesliga,81,80,78,79,/static/FIFA20/images/crest/5/light/notfound.png
+Athletic Club de Bilbao,LaLiga Santander,81,79,79,79,/static/FIFA20/images/crest/5/light/notfound.png
+Ajax,Eredivisie,80,79,78,79,/static/FIFA20/images/crest/5/light/notfound.png
+OL,Ligue 1 Conforama,80,78,77,79,/static/FIFA20/images/crest/5/light/notfound.png
+Sevilla FC,LaLiga Santander,79,80,79,79,/static/FIFA20/images/crest/5/light/notfound.png
+FC Porto,Liga NOS,79,78,81,79,/static/FIFA20/images/crest/5/light/notfound.png
+AS Monaco,Ligue 1 Conforama,79,78,76,79,/static/FIFA20/images/crest/5/light/notfound.png
+SL Benfica,Liga NOS,78,79,80,79,/static/FIFA20/images/crest/5/light/notfound.png
+Everton,Premier League,77,79,80,79,/static/FIFA20/images/crest/5/light/7.webp
+West Ham United,Premier League,83,79,76,78,/static/FIFA20/images/crest/5/light/19.webp
+Villarreal CF,LaLiga Santander,80,77,78,78,/static/FIFA20/images/crest/5/light/483.webp
+Torino,Serie A TIM,80,77,78,78,/static/FIFA20/images/crest/5/light/54.webp
+Leicester City,Premier League,80,77,77,78,/static/FIFA20/images/crest/5/light/95.webp
+Real Sociedad,LaLiga Santander,79,79,76,78,/static/FIFA20/images/crest/5/light/notfound.png
+SD Eibar,LaLiga Santander,79,78,76,78,/static/FIFA20/images/crest/5/light/notfound.png
+Frankfurt,Bundesliga,79,77,78,78,/static/FIFA20/images/crest/5/light/notfound.png
+Getafe CF,LaLiga Santander,79,76,78,78,/static/FIFA20/images/crest/5/light/notfound.png
+TSG Hoffenheim,Bundesliga,79,76,76,78,/static/FIFA20/images/crest/5/light/notfound.png
+M'gladbach,Bundesliga,78,78,78,78,/static/FIFA20/images/crest/5/light/notfound.png
+Wolves,Premier League,77,81,77,78,/static/FIFA20/images/crest/5/light/notfound.png
+Watford,Premier League,77,79,76,78,/static/FIFA20/images/crest/5/light/notfound.png
+VfL Wolfsburg,Bundesliga,77,78,76,78,/static/FIFA20/images/crest/5/light/notfound.png
+RC Celta,LaLiga Santander,80,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+Galatasaray SK,Süper Lig,79,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+River Plate,SAF,78,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+Newcastle United,Premier League,78,76,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Sporting CP,Liga NOS,77,79,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+OM,Ligue 1 Conforama,77,79,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+RCD Espanyol,LaLiga Santander,77,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Boca Juniors,SAF,76,77,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Werder Bremen,Bundesliga,75,79,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+Crystal Palace,Premier League,75,78,76,77,/static/FIFA20/images/crest/5/light/notfound.png
+Bournemouth,Premier League,75,77,75,77,/static/FIFA20/images/crest/5/light/notfound.png
+Beşiktaş,Süper Lig,79,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Fiorentina,Serie A TIM,78,75,77,76,/static/FIFA20/images/crest/5/light/notfound.png
+PSV,Eredivisie,78,75,75,76,/static/FIFA20/images/crest/5/light/notfound.png
+Levante UD,LaLiga Santander,77,78,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Lokomotiv Moscow,Rest of World,77,77,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Burnley,Premier League,77,76,76,76,/static/FIFA20/images/crest/5/light/1796.webp
+Racing Club,SAF,77,76,75,76,/static/FIFA20/images/crest/5/light/101085.webp
+Brighton,Premier League,77,76,75,76,/static/FIFA20/images/crest/5/light/1808.webp
+Hertha BSC,Bundesliga,77,75,75,76,/static/FIFA20/images/crest/5/light/166.webp
+LOSC Lille,Ligue 1 Conforama,76,77,75,76,/static/FIFA20/images/crest/5/light/65.webp
+Cagliari,Serie A TIM,76,77,72,76,/static/FIFA20/images/crest/5/light/notfound.png
+FC Schalke 04,Bundesliga,76,76,77,76,/static/FIFA20/images/crest/5/light/notfound.png
+SC Braga,Liga NOS,76,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Club Brugge,Pro League,76,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+ASSE,Ligue 1 Conforama,76,75,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Fenerbahçe,Süper Lig,75,77,75,76,/static/FIFA20/images/crest/5/light/notfound.png
+Southampton,Premier League,75,76,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+D. Alavés,LaLiga Santander,75,75,76,76,/static/FIFA20/images/crest/5/light/notfound.png
+Shakhtar Donetsk,Rest of World,78,76,73,75,/static/FIFA20/images/crest/5/light/notfound.png
+Sampdoria,Serie A TIM,77,75,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+Tigres,LIGA Bancomer MX,77,75,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Köln,Bundesliga,77,75,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Stade Rennais,Ligue 1 Conforama,76,76,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Udinese,Serie A TIM,76,75,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+R. Valladolid CF,LaLiga Santander,76,75,73,75,/static/FIFA20/images/crest/5/light/notfound.png
+FC Augsburg,Bundesliga,76,74,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+Bologna,Serie A TIM,75,77,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Independiente,SAF,75,75,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+CD Leganés,LaLiga Santander,75,75,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+Montpellier HSC,Ligue 1 Conforama,75,75,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+Olympiacos CFP,Rest of World,75,75,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Aston Villa,Premier League,75,75,74,75,/static/FIFA20/images/crest/5/light/notfound.png
+Girondins de Bx,Ligue 1 Conforama,75,74,76,75,/static/FIFA20/images/crest/5/light/notfound.png
+1. FSV Mainz 05,Bundesliga,75,74,75,75,/static/FIFA20/images/crest/5/light/notfound.png
+Sassuolo,Serie A TIM,75,74,73,75,/static/FIFA20/images/crest/5/light/notfound.png
+Başakşehir,Süper Lig,74,75,76,75,/static/FIFA20/images/crest/5/light/101014.webp
+OGC Nice,Ligue 1 Conforama,74,74,76,75,/static/FIFA20/images/crest/5/light/72.webp
+Genoa,Serie A TIM,73,75,77,75,/static/FIFA20/images/crest/5/light/110556.webp
+PAOK,Rest of World,73,75,74,75,/static/FIFA20/images/crest/5/light/393.webp
+Grêmio,Liga do Brasil,72,75,74,75,/static/FIFA20/images/crest/5/light/1629.webp
+Royal Antwerp FC,Pro League,78,74,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+Feyenoord,Eredivisie,77,73,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Girona FC,LaLiga 1 I 2 I 3,77,73,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+Atlético Mineiro,Liga do Brasil,76,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Norwich City,Premier League,76,73,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+Dynamo Kyiv,Rest of World,75,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Monterrey,LIGA Bancomer MX,75,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Spartak Moscow,Rest of World,75,74,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+SC Freiburg,Bundesliga,75,74,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+KRC Genk,Pro League,74,76,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Angers SCO,Ligue 1 Conforama,74,75,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+Toulouse FC,Ligue 1 Conforama,74,74,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+RC Strasbourg,Ligue 1 Conforama,74,74,73,74,/static/FIFA20/images/crest/5/light/notfound.png
+RSC Anderlecht,Pro League,74,72,71,74,/static/FIFA20/images/crest/5/light/notfound.png
+Slavia Praha,Rest of World,73,75,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Internacional,Liga do Brasil,73,74,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+V. Guimarães,Liga NOS,72,73,74,74,/static/FIFA20/images/crest/5/light/notfound.png
+Al Hilal,Saudi Professional League,79,74,71,73,/static/FIFA20/images/crest/5/light/notfound.png
+Cruzeiro,Liga do Brasil,76,71,75,73,/static/FIFA20/images/crest/5/light/notfound.png
+Granada CF,LaLiga Santander,75,74,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+Parma,Serie A TIM,75,74,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Fulham,EFL Championship,75,74,70,73,/static/FIFA20/images/crest/5/light/notfound.png
+Trabzonspor,Süper Lig,75,73,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+AEK Athens,Rest of World,75,73,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+SPAL,Serie A TIM,75,71,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+KAA Gent,Pro League,74,74,73,73,/static/FIFA20/images/crest/5/light/674.webp
+CA Osasuna,LaLiga Santander,74,74,72,73,/static/FIFA20/images/crest/5/light/479.webp
+Viktoria Plzeň,Rest of World,74,73,73,73,/static/FIFA20/images/crest/5/light/110468.webp
+Amiens SC,Ligue 1 Conforama,74,73,72,73,/static/FIFA20/images/crest/5/light/1816.webp
+CSKA Moscow,Rest of World,74,73,72,73,/static/FIFA20/images/crest/5/light/315.webp
+Düsseldorf,Bundesliga,74,72,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+América,LIGA Bancomer MX,74,72,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Celtic,Scottish Prem,73,75,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+RB Salzburg,Ö. Bundesliga,73,74,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+Rayo Vallecano,LaLiga 1 I 2 I 3,73,74,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Hellas Verona,Serie A TIM,73,74,70,73,/static/FIFA20/images/crest/5/light/notfound.png
+Sheffield Utd,Premier League,73,73,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+RCD Mallorca,LaLiga Santander,73,73,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Standard Liège,Pro League,73,73,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Dinamo Zagreb,Rest of World,73,73,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Hamburg,Bundesliga 2,73,73,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Rangers,Scottish Prem,73,72,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+FC Nantes,Ligue 1 Conforama,73,72,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+Cruz Azul,LIGA Bancomer MX,72,74,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+Stade de Reims,Ligue 1 Conforama,72,74,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+San Lorenzo,SAF,71,74,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+Fluminense,Liga do Brasil,71,74,72,73,/static/FIFA20/images/crest/5/light/notfound.png
+VfB Stuttgart,Bundesliga 2,71,73,73,73,/static/FIFA20/images/crest/5/light/notfound.png
+Hannover 96,Bundesliga 2,71,73,71,73,/static/FIFA20/images/crest/5/light/notfound.png
+Atlanta United,MLS,77,71,70,72,/static/FIFA20/images/crest/5/light/notfound.png
+Alanyaspor,Süper Lig,76,73,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+BSC Young Boys,RSL,76,73,68,72,/static/FIFA20/images/crest/5/light/notfound.png
+Pachuca,LIGA Bancomer MX,75,73,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Brescia,Serie A TIM,75,73,69,72,/static/FIFA20/images/crest/5/light/notfound.png
+Toluca,LIGA Bancomer MX,74,73,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Lanús,SAF,74,72,71,72,/static/FIFA20/images/crest/5/light/110395.webp
+AZ,Eredivisie,73,74,72,72,/static/FIFA20/images/crest/5/light/1906.webp
+Colón,SAF,73,74,69,72,/static/FIFA20/images/crest/5/light/110406.webp
+León,LIGA Bancomer MX,73,73,71,72,/static/FIFA20/images/crest/5/light/110781.webp
+SD Huesca,LaLiga 1 I 2 I 3,73,72,72,72,/static/FIFA20/images/crest/5/light/110839.webp
+Botafogo,Liga do Brasil,73,72,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Stade Brestois,Ligue 1 Conforama,73,72,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Nott'm Forest,EFL Championship,73,72,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Rosario Central,SAF,73,72,70,72,/static/FIFA20/images/crest/5/light/notfound.png
+Santos Laguna,LIGA Bancomer MX,73,71,69,72,/static/FIFA20/images/crest/5/light/notfound.png
+Vélez Sarsfield,SAF,72,74,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+West Brom,EFL Championship,72,73,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Leeds United,EFL Championship,72,72,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+Cardiff City,EFL Championship,72,71,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+Lecce,Serie A TIM,72,71,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+FC København,Superliga,71,73,69,72,/static/FIFA20/images/crest/5/light/notfound.png
+Sparta Praha,Rest of World,71,72,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+Banfield,SAF,71,72,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Union Berlin,Bundesliga,71,71,72,72,/static/FIFA20/images/crest/5/light/notfound.png
+1. FC Nürnberg,Bundesliga 2,71,71,70,72,/static/FIFA20/images/crest/5/light/notfound.png
+Göztepe,Süper Lig,70,72,69,72,/static/FIFA20/images/crest/5/light/notfound.png
+Uni. Católica,Camp. Scotiabank,70,71,71,72,/static/FIFA20/images/crest/5/light/notfound.png
+Stoke City,EFL Championship,68,73,70,72,/static/FIFA20/images/crest/5/light/notfound.png
+LA Galaxy,MLS,85,72,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+D.C. United,MLS,77,71,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Swansea City,EFL Championship,75,71,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Kayserispor,Süper Lig,75,71,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Guangzhou,CSL,75,71,68,71,/static/FIFA20/images/crest/5/light/notfound.png
+Al Ahli,Saudi Professional League,74,72,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Guadalajara,LIGA Bancomer MX,74,71,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Portimonense SC,Liga NOS,73,72,69,71,/static/FIFA20/images/crest/5/light/10031.webp
+FC Metz,Ligue 1 Conforama,73,71,72,71,/static/FIFA20/images/crest/5/light/68.webp
+Panathinaikos,Rest of World,73,70,70,71,/static/FIFA20/images/crest/5/light/1884.webp
+Seattle Sounders,MLS,72,73,68,71,/static/FIFA20/images/crest/5/light/111144.webp
+Goiás,Liga do Brasil,72,72,71,71,/static/FIFA20/images/crest/5/light/111042.webp
+Santos,Liga do Brasil,72,72,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Tijuana,LIGA Bancomer MX,72,72,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Benevento,Calcio B,72,71,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Brentford,EFL Championship,72,71,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Junior,Liga Dimayor,72,70,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Gazişehir Gaziantep,Süper Lig,72,70,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Dijon FCO,Ligue 1 Conforama,72,70,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Rio Ave FC,Liga NOS,71,73,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+CSA,Liga do Brasil,71,72,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Cádiz CF,LaLiga 1 I 2 I 3,71,72,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+FC Utrecht,Eredivisie,71,72,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Kasimpaşa,Süper Lig,71,71,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Unión,SAF,71,70,73,71,/static/FIFA20/images/crest/5/light/notfound.png
+Huddersfield,EFL Championship,71,70,72,71,/static/FIFA20/images/crest/5/light/notfound.png
+Moreirense FC,Liga NOS,71,70,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Sporting KC,MLS,71,70,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Konyaspor,Süper Lig,71,70,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Bristol City,EFL Championship,71,70,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Nîmes Olympique,Ligue 1 Conforama,71,69,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Al Nassr,Saudi Professional League,70,73,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Bahia,Liga do Brasil,70,72,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Santa Clara,Liga NOS,70,72,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Sheffield Wed,EFL Championship,70,72,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+RC Deportivo,LaLiga 1 I 2 I 3,70,72,69,71,/static/FIFA20/images/crest/5/light/notfound.png
+Çaykur Rizespor,Süper Lig,70,71,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+NY Red Bulls,MLS,70,71,71,71,/static/FIFA20/images/crest/5/light/689.webp
+Defensa,SAF,70,71,70,71,/static/FIFA20/images/crest/5/light/111710.webp
+Frosinone,Calcio B,70,71,70,71,/static/FIFA20/images/crest/5/light/111657.webp
+R. Oviedo,LaLiga 1 I 2 I 3,70,71,70,71,/static/FIFA20/images/crest/5/light/110827.webp
+Colo-Colo,Camp. Scotiabank,70,69,72,71,/static/FIFA17/images/crest/5/light/110980.webp
+Boavista FC,Liga NOS,69,72,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+Chapecoense,Liga do Brasil,69,71,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+Málaga CF,LaLiga 1 I 2 I 3,69,71,71,71,/static/FIFA20/images/crest/5/light/notfound.png
+FC Basel 1893,RSL,65,71,70,71,/static/FIFA20/images/crest/5/light/notfound.png
+LAFC,MLS,76,71,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Albacete BP,LaLiga 1 I 2 I 3,73,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Atl. Nacional,Liga Dimayor,73,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Monarcas Morelia,LIGA Bancomer MX,73,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+RC Lens,Domino’s Ligue 2,73,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Gençlerbirliği,Süper Lig,73,70,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Antalyaspor,Süper Lig,73,69,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+FCSB,Liga României,73,69,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Toronto FC,MLS,72,71,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Atlético Tucumán,SAF,72,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Kawasaki-F,Meiji Yasuda J1,72,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+U.N.A.M.,LIGA Bancomer MX,72,70,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Yeni Malatyaspor,Süper Lig,71,72,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Birmingham City,EFL Championship,71,71,71,70,/static/FIFA20/images/crest/5/light/notfound.png
+Columbus Crew SC,MLS,71,71,67,70,/static/FIFA20/images/crest/5/light/notfound.png
+Vissel Kobe,Meiji Yasuda J1,71,70,72,70,/static/FIFA20/images/crest/5/light/notfound.png
+Sp. Charleroi,Pro League,71,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Estudiantes,SAF,71,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Paderborn,Bundesliga,71,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Sivasspor,Süper Lig,71,68,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Talleres,SAF,71,68,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Kaizer Chiefs,Rest of World,71,68,67,70,/static/FIFA20/images/crest/5/light/110929.webp
+New York City FC,MLS,70,72,70,70,/static/FIFA20/images/crest/5/light/112828.webp
+Avaí,Liga do Brasil,70,71,71,70,/static/FIFA20/images/crest/5/light/111976.webp
+Portland Timbers,MLS,70,71,70,70,/static/FIFA20/images/crest/5/light/111140.webp
+Belenenses,Liga NOS,70,71,70,70,/static/FIFA20/images/crest/5/light/1889.webp
+Empoli,Calcio B,70,71,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Jeonbuk Hyundai,K-League 1,70,70,71,70,/static/FIFA20/images/crest/5/light/notfound.png
+Huracán,SAF,70,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+UD Las Palmas,LaLiga 1 I 2 I 3,70,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Rosenborg BK,Eliteserien,70,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+R. Sporting,LaLiga 1 I 2 I 3,70,70,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Zulte Waregem,Pro League,70,70,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Bielefeld,Bundesliga 2,70,70,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Newell's,SAF,70,69,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Darmstadt,Bundesliga 2,70,69,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Malmö FF,Allsvenskan,69,73,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Philadelphia,MLS,69,73,67,70,/static/FIFA20/images/crest/5/light/notfound.png
+Preston,EFL Championship,69,72,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Heidenheim,Bundesliga 2,69,72,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Reading,EFL Championship,69,71,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Derby County,EFL Championship,69,71,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Blackburn Rovers,EFL Championship,69,71,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+FC Famalicão,Liga NOS,69,71,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+EA Guingamp,Domino’s Ligue 2,69,71,69,70,/static/FIFA20/images/crest/5/light/notfound.png
+Arsenal,SAF,69,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Athletico-PR,Liga do Brasil,69,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Middlesbrough,EFL Championship,69,70,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Marítimo,Liga NOS,69,69,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+Puebla,LIGA Bancomer MX,69,69,67,70,/static/FIFA20/images/crest/5/light/notfound.png
+Gimnasia,SAF,69,69,67,70,/static/FIFA20/images/crest/5/light/notfound.png
+CFR Cluj,Liga României,69,67,70,70,/static/FIFA20/images/crest/5/light/114385.webp
+Fortaleza,Liga do Brasil,68,71,70,70,/static/FIFA20/images/crest/5/light/111052.webp
+Vitesse,Eredivisie,68,71,69,70,/static/FIFA20/images/crest/5/light/1909.webp
+CD Tenerife,LaLiga 1 I 2 I 3,68,71,68,70,/static/FIFA20/images/crest/5/light/260.webp
+R. Zaragoza,LaLiga 1 I 2 I 3,68,70,69,70,/static/FIFA20/images/crest/5/light/244.webp
+V. Setúbal,Liga NOS,68,69,70,70,/static/FIFA20/images/crest/5/light/notfound.png
+UD Almería,LaLiga 1 I 2 I 3,68,69,68,70,/static/FIFA20/images/crest/5/light/notfound.png
+Atlas,LIGA Bancomer MX,68,69,67,70,/static/FIFA20/images/crest/5/light/notfound.png
+Minnesota United,MLS,67,71,71,70,/static/FIFA20/images/crest/5/light/notfound.png
+Shanghai SIPG,CSL,78,66,65,69,/static/FIFA20/images/crest/5/light/notfound.png
+Al Ittihad,Saudi Professional League,75,70,65,69,/static/FIFA20/images/crest/5/light/notfound.png
+Beijing Guoan,CSL,74,72,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Indep. Medellín,Liga Dimayor,74,68,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Chicago Fire,MLS,73,70,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Orlando City,MLS,72,71,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+FC Lorient,Domino’s Ligue 2,72,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Denizlispor,Süper Lig,72,69,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Sint-Truiden,Pro League,72,68,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Crotone,Calcio B,72,67,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Impact Montréal,MLS,71,71,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Real Salt Lake,MLS,71,70,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+New England,MLS,71,70,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+QPR,EFL Championship,71,69,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+Chievo Verona,Calcio B,71,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Gamba Osaka,Meiji Yasuda J1,71,69,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Deportes Tolima,Liga Dimayor,71,68,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Molde FK,Eliteserien,71,68,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Perugia,Calcio B,71,68,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Argentinos Jrs.,SAF,71,67,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+AIK,Allsvenskan,70,71,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Cremona,Calcio B,70,69,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+LASK Linz,Ö. Bundesliga,70,69,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+KAS Eupen,Pro League,70,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Bochum,Bundesliga 2,70,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Necaxa,LIGA Bancomer MX,70,69,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+SM Caen,Domino’s Ligue 2,70,68,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+AD Alcorcón,LaLiga 1 I 2 I 3,70,67,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+AJ Auxerre,Domino’s Ligue 2,70,67,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+SJ Earthquakes,MLS,69,71,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Ulsan Hyundai,K-League 1,69,70,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+CD Lugo,LaLiga 1 I 2 I 3,69,70,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+KV Mechelen,Pro League,69,70,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+FC Twente,Eredivisie,69,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Millwall,EFL Championship,69,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Excel Mouscron,Pro League,69,69,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+St. Pauli,Bundesliga 2,69,69,66,69,/static/FIFA20/images/crest/5/light/notfound.png
+Uni. de Chile,Camp. Scotiabank,69,68,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+FC Midtjylland,Superliga,69,68,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+FC Dallas,MLS,69,67,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+Whitecaps FC,MLS,69,67,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Salerno,Calcio B,69,67,64,69,/static/FIFA20/images/crest/5/light/notfound.png
+Hull City,EFL Championship,68,71,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+KV Oostende,Pro League,68,70,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+Querétaro,LIGA Bancomer MX,68,70,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+SK Rapid Wien,Ö. Bundesliga,68,70,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Elche CF,LaLiga 1 I 2 I 3,68,70,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Wigan Athletic,EFL Championship,68,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Dresden,Bundesliga 2,68,69,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Sandhausen,Bundesliga 2,68,68,70,69,/static/FIFA20/images/crest/5/light/notfound.png
+CS U Craiova,Liga României,68,67,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Atlético de San Luis,LIGA Bancomer MX,67,69,69,69,/static/FIFA20/images/crest/5/light/notfound.png
+Legia Warszawa,Ekstraklasa,67,69,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Brøndby IF,Superliga,67,69,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+Aldosivi,SAF,66,69,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Pescara,Calcio B,65,69,67,69,/static/FIFA20/images/crest/5/light/notfound.png
+KV Kortrijk,Pro League,63,70,68,69,/static/FIFA20/images/crest/5/light/notfound.png
+Jiangsu Suning,CSL,76,65,65,68,/static/FIFA20/images/crest/5/light/notfound.png
+Shandong Luneng,CSL,75,68,65,68,/static/FIFA20/images/crest/5/light/notfound.png
+América de Cali,Liga Dimayor,74,68,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Al Ain FC,Rest of World,74,66,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Houston Dynamo,MLS,72,68,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+SK Sturm Graz,Ö. Bundesliga,71,69,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Hammarby IF,Allsvenskan,71,69,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Wiesbaden,Bundesliga 2,71,67,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+F.C. Tokyo,Meiji Yasuda J1,70,69,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+MKE Ankaragücü,Süper Lig,70,68,70,68,/static/FIFA20/images/crest/5/light/notfound.png
+Lechia Gdańsk,Ekstraklasa,70,68,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Paris FC,Domino’s Ligue 2,70,68,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Hibernian,Scottish Prem,70,68,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Coquimbo Unido,Camp. Scotiabank,70,66,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Desportivo Aves,Liga NOS,69,69,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Paços Ferreira,Liga NOS,69,68,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Nagoya Grampus,Meiji Yasuda J1,69,68,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Suwon Samsung,K-League 1,69,68,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Urawa Reds,Meiji Yasuda J1,69,67,70,68,/static/FIFA20/images/crest/5/light/notfound.png
+Aue,Bundesliga 2,69,67,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Fürth,Bundesliga 2,69,66,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+CD Tondela,Liga NOS,69,64,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Cerezo Osaka,Meiji Yasuda J1,68,69,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Kashima Antlers,Meiji Yasuda J1,68,69,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+PEC Zwolle,Eredivisie,68,69,66,68,/static/FIFA20/images/crest/5/light/1914.webp
+Livorno,Calcio B,68,69,66,68,/static/FIFA20/images/crest/5/light/1844.webp
+Cosenza,Calcio B,68,68,67,68,/static/FIFA20/images/crest/5/light/112168.webp
+Luton Town,EFL Championship,68,68,67,68,/static/FIFA20/images/crest/5/light/1923.webp
+FK Austria Wien,Ö. Bundesliga,68,68,67,68,/static/FIFA20/images/crest/5/light/256.webp
+Aberdeen,Scottish Prem,68,68,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+La Spezia,Calcio B,68,68,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Pordenone,Calcio B,68,67,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+FC Cincinnati,MLS,68,67,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+ESTAC Troyes,Domino’s Ligue 2,68,67,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+Extremadura UD,LaLiga 1 I 2 I 3,68,67,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Kiel,Bundesliga 2,67,71,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Cercle Brugge,Pro League,67,71,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Sunderland,EFL League One,67,69,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Ascoli,Calcio B,67,68,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+S-Hiroshima,Meiji Yasuda J1,67,68,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Hearts,Scottish Prem,67,67,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Charlton Ath,EFL Championship,66,69,68,68,/static/FIFA20/images/crest/5/light/notfound.png
+Millonarios,Liga Dimayor,66,69,66,68,/static/FIFA20/images/crest/5/light/notfound.png
+Patronato,SAF,66,68,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+FC Groningen,Eredivisie,66,67,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Djurgårdens IF,Allsvenskan,66,66,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+Unión La Calera,Camp. Scotiabank,65,66,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+Ceará SC,Liga do Brasil,64,70,69,68,/static/FIFA20/images/crest/5/light/notfound.png
+Al Shabab,Saudi Professional League,63,70,67,68,/static/FIFA20/images/crest/5/light/notfound.png
+Dalian Yifang,CSL,78,70,62,67,/static/FIFA20/images/crest/5/light/notfound.png
+Al Taawoun,Saudi Professional League,75,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Deportivo Cali,Liga Dimayor,75,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Colorado Rapids,MLS,74,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Guangzhou R&F,CSL,74,65,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+La Equidad,Liga Dimayor,73,66,65,67,/static/FIFA20/images/crest/5/light/112523.webp
+Yokohama F･M,Meiji Yasuda J1,72,68,66,67,/static/FIFA20/images/crest/5/light/101151.webp
+Shanghai Shenhua,CSL,72,68,61,67,/static/FIFA20/images/crest/5/light/110955.webp
+Hebei CFFC,CSL,72,64,66,67,/static/FIFA20/images/crest/5/light/112978.webp
+FC Juárez,LIGA Bancomer MX,71,67,67,67,/static/FIFA20/images/crest/5/light/113134.webp
+H.Consa.Sapporo,Meiji Yasuda J1,70,66,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+FC Luzern,RSL,70,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+FC Lugano,RSL,70,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Havre AC,Domino’s Ligue 2,69,67,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+CD Antofagasta,Camp. Scotiabank,69,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Ettifaq FC,Saudi Professional League,69,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Heracles Almelo,Eredivisie,69,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+SC Heerenveen,Eredivisie,68,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Lech Poznań,Ekstraklasa,68,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+FC Seoul,K-League 1,68,68,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Nancy,Domino’s Ligue 2,68,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+CD Numancia,LaLiga 1 I 2 I 3,68,67,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Dinamo Bucureşti,Liga României,68,67,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Karlsruher SC,Bundesliga 2,68,66,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+Depor. Iquique,Camp. Scotiabank,68,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Pohang Steelers,K-League 1,68,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Piast Gliwice,Ekstraklasa,68,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Veracruz,LIGA Bancomer MX,68,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Barnsley,EFL Championship,68,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Astra Giurgiu,Liga României,68,65,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+Everton de Viña,Camp. Scotiabank,68,65,63,67,/static/FIFA20/images/crest/5/light/notfound.png
+Sydney FC,Hyundai A-League,67,69,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+FC Sion,RSL,67,69,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+IFK Norrköping,Allsvenskan,67,69,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Willem II,Eredivisie,67,68,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+VfL Osnabrück,Bundesliga 2,67,68,67,67,/static/FIFA20/images/crest/5/light/487.webp
+Venezia,Calcio B,67,68,65,67,/static/FIFA20/images/crest/5/light/205.webp
+Viitorul,Liga României,67,67,68,67,/static/FIFA20/images/crest/5/light/113180.webp
+Regensburg,Bundesliga 2,67,67,68,67,/static/FIFA20/images/crest/5/light/543.webp
+Pisa,Calcio B,67,67,67,67,/static/FIFA20/images/crest/5/light/110738.webp
+CD Mirandés,LaLiga 1 I 2 I 3,67,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Gil Vicente,Liga NOS,67,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+ADO Den Haag,Eredivisie,67,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Racing,LaLiga 1 I 2 I 3,67,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Melb. Victory,Hyundai A-League,67,67,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Waasl. Beveren,Pro League,67,67,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Ipswich,EFL League One,67,67,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Orlando Pirates,Rest of World,67,67,63,67,/static/FIFA20/images/crest/5/light/notfound.png
+Pogoń Szczecin,Ekstraklasa,67,66,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+SK Brann,Eliteserien,66,69,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+Al Wehda,Saudi Professional League,66,69,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Cittadella,Calcio B,66,68,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+VVV-Venlo,Eredivisie,66,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Jeju United,K-League 1,66,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Uni. Concepción,Camp. Scotiabank,66,68,64,67,/static/FIFA20/images/crest/5/light/notfound.png
+Atl. Bucaramanga,Liga Dimayor,66,68,63,67,/static/FIFA20/images/crest/5/light/notfound.png
+Oxford United,EFL League One,66,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Huachipato FC,Camp. Scotiabank,66,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Santa Fe,Liga Dimayor,66,66,65,67,/static/FIFA20/images/crest/5/light/notfound.png
+Unión Española,Camp. Scotiabank,66,65,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+C. Stabia,Calcio B,65,69,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Jagiellonia,Ekstraklasa,65,68,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+Kilmarnock,Scottish Prem,65,68,66,67,/static/FIFA20/images/crest/5/light/notfound.png
+Once Caldas,Liga Dimayor,65,67,67,67,/static/FIFA20/images/crest/5/light/notfound.png
+Deportivo Pasto,Liga Dimayor,64,66,68,67,/static/FIFA20/images/crest/5/light/notfound.png
+FC Zürich,RSL,58,67,66,67,/static/FIFA20/images/crest/5/light/894.webp
+Perth Glory,Hyundai A-League,73,67,66,66,/static/FIFA20/images/crest/5/light/111399.webp
+Al Faisaly,Saudi Professional League,71,66,65,66,/static/FIFA20/images/crest/5/light/112389.webp
+Al Fayha,Saudi Professional League,71,66,62,66,/static/FIFA20/images/crest/5/light/113057.webp
+Cracovia,Ekstraklasa,71,65,66,66,/static/FIFA20/images/crest/5/light/110747.webp
+Valenciennes FC,Domino’s Ligue 2,71,65,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Cúcuta Deportivo,Liga Dimayor,70,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Godoy Cruz,SAF,70,64,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Magdeburg,3. Liga,69,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Shimizu S-Pulse,Meiji Yasuda J1,69,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+WS Wanderers,Hyundai A-League,68,68,63,66,/static/FIFA20/images/crest/5/light/notfound.png
+Odense BK,Superliga,68,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Portsmouth,EFL League One,68,66,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+IFK Göteborg,Allsvenskan,68,66,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Sagan Tosu,Meiji Yasuda J1,68,66,63,66,/static/FIFA20/images/crest/5/light/notfound.png
+Vålerenga Fotball,Eliteserien,68,65,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Aalborg BK,Superliga,68,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+FCSM,Domino’s Ligue 2,68,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Western United,Hyundai A-League,67,68,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Chamois FC,Domino’s Ligue 2,67,67,64,66,/static/FIFA20/images/crest/5/light/notfound.png
+Patriotas,Liga Dimayor,67,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Sarpsborg 08 FF,Eliteserien,67,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+CF Fuenlabrada,LaLiga 1 I 2 I 3,67,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+SD Ponferradina,LaLiga 1 I 2 I 3,67,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Clermont Foot,Domino’s Ligue 2,67,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Peterborough,EFL League One,67,66,64,66,/static/FIFA20/images/crest/5/light/notfound.png
+Júbilo Iwata,Meiji Yasuda J1,67,66,61,66,/static/FIFA20/images/crest/5/light/notfound.png
+Audax Italiano,Camp. Scotiabank,67,65,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Braunschweig,3. Liga,67,65,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+BK Häcken,Allsvenskan,67,65,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Aarhus AGF,Superliga,67,65,65,66,/static/FIFA20/images/crest/5/light/271.webp
+KFC Uerdingen,3. Liga,67,64,67,66,/static/FIFA20/images/crest/5/light/167.webp
+Melbourne City,Hyundai A-League,66,67,65,66,/static/FIFA20/images/crest/5/light/112224.webp
+CD Palestino,Camp. Scotiabank,66,67,65,66,/static/FIFA20/images/crest/5/light/111328.webp
+Al. Petrolera,Liga Dimayor,66,66,67,66,/static/FIFA20/images/crest/5/light/112579.webp
+CD O'Higgins,Camp. Scotiabank,66,66,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Grenoble Foot,Domino’s Ligue 2,66,66,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Ingolstadt,3. Liga,66,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+FC Emmen,Eredivisie,66,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Lincoln City,EFL League One,66,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Gaz Metan,Liga României,66,66,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Sparta Rotterdam,Eredivisie,66,66,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+La Berrichonne,Domino’s Ligue 2,66,66,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+Bolton,EFL League One,66,65,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Rotherham Utd,EFL League One,66,64,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Wolfsberger AC,Ö. Bundesliga,65,67,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Wisła Kraków,Ekstraklasa,65,67,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Chiavari,Calcio B,65,67,64,66,/static/FIFA20/images/crest/5/light/notfound.png
+Kaiserslautern,3. Liga,65,65,65,66,/static/FIFA20/images/crest/5/light/notfound.png
+FC Nordsjælland,Superliga,64,67,67,66,/static/FIFA20/images/crest/5/light/notfound.png
+Envigado,Liga Dimayor,64,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Rionegro Águilas,Liga Dimayor,63,67,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Gangwon FC,K-League 1,63,66,66,66,/static/FIFA20/images/crest/5/light/notfound.png
+Fortuna Sittard,Eredivisie,61,66,64,66,/static/FIFA20/images/crest/5/light/notfound.png
+Tianjin TEDA,CSL,71,64,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Al Hazem,Saudi Professional League,70,66,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Unión Magdalena,Liga Dimayor,69,66,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Tianjin Tianhai,CSL,69,64,62,65,/static/FIFA20/images/crest/5/light/notfound.png
+SCR Altach,Ö. Bundesliga,68,66,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+CD Cobresal,Camp. Scotiabank,67,65,61,65,/static/FIFA20/images/crest/5/light/notfound.png
+Curicó Unido,Camp. Scotiabank,67,64,64,65,/static/FIFA20/images/crest/5/light/112655.webp
+Gyeongnam FC,K-League 1,67,64,64,65,/static/FIFA20/images/crest/5/light/111588.webp
+Al Raed,Saudi Professional League,66,67,62,65,/static/FIFA20/images/crest/5/light/112392.webp
+St. Johnstone,Scottish Prem,66,66,64,65,/static/FIFA20/images/crest/5/light/100804.webp
+SønderjyskE,Superliga,66,66,64,65,/static/FIFA20/images/crest/5/light/1447.webp
+IF Elfsborg,Allsvenskan,66,66,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+RKC Waalwijk,Eredivisie,66,66,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Śląsk Wrocław,Ekstraklasa,66,65,66,65,/static/FIFA20/images/crest/5/light/notfound.png
+AC Ajaccio,Domino’s Ligue 2,66,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+FC St. Gallen,RSL,66,65,62,65,/static/FIFA20/images/crest/5/light/notfound.png
+Southend United,EFL League One,66,64,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Servette FC,RSL,66,64,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Daegu FC,K-League 1,66,64,61,65,/static/FIFA20/images/crest/5/light/notfound.png
+Oita Trinita,Meiji Yasuda J1,66,63,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Trapani,Calcio B,65,66,66,65,/static/FIFA20/images/crest/5/light/notfound.png
+Le Mans FC,Domino’s Ligue 2,65,66,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Unterhaching,3. Liga,65,66,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Wycombe,EFL League One,65,66,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Arka Gdynia,Ekstraklasa,65,66,62,65,/static/FIFA20/images/crest/5/light/notfound.png
+Incheon United,K-League 1,65,65,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Hallescher FC,3. Liga,65,65,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+FC Chambly,Domino’s Ligue 2,65,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Fleetwood Town,EFL League One,65,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Admira Wacker,Ö. Bundesliga,65,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Wisła Płock,Ekstraklasa,65,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Hansa Rostock,3. Liga,65,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Korona Kielce,Ekstraklasa,65,65,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Shrewsbury,EFL League One,65,65,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Helsingborgs IF,Allsvenskan,65,64,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Vegalta Sendai,Meiji Yasuda J1,65,63,66,65,/static/FIFA20/images/crest/5/light/notfound.png
+Matsumoto Yamaga,Meiji Yasuda J1,65,63,64,65,/static/FIFA20/images/crest/5/light/113158.webp
+Esbjerg fB,Superliga,64,67,65,65,/static/FIFA20/images/crest/5/light/1445.webp
+FC Voluntari,Liga României,64,65,65,65,/static/FIFA20/images/crest/5/light/113182.webp
+Sepsi OSK,Liga României,64,65,64,65,/static/FIFA20/images/crest/5/light/113378.webp
+US Orléans,Domino’s Ligue 2,64,65,64,65,/static/FIFA20/images/crest/5/light/112276.webp
+GIF Sundsvall,Allsvenskan,64,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Jaguares,Liga Dimayor,64,65,61,65,/static/FIFA20/images/crest/5/light/notfound.png
+FSV Zwickau,3. Liga,64,64,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Odds BK,Eliteserien,63,65,67,65,/static/FIFA20/images/crest/5/light/notfound.png
+Central Córdoba,SAF,63,65,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+FC Hermannstadt,Liga României,63,64,64,65,/static/FIFA20/images/crest/5/light/notfound.png
+Zagłębie Lubin,Ekstraklasa,62,66,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Al Fateh,Saudi Professional League,62,65,68,65,/static/FIFA20/images/crest/5/light/notfound.png
+FC Botoșani,Liga României,61,66,63,65,/static/FIFA20/images/crest/5/light/notfound.png
+Motherwell,Scottish Prem,61,65,65,65,/static/FIFA20/images/crest/5/light/notfound.png
+Wuhan Zall,CSL,76,64,62,64,/static/FIFA20/images/crest/5/light/notfound.png
+Dundalk,SSE Airtricity Lge,69,65,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Henan Jianye,CSL,69,65,62,64,/static/FIFA20/images/crest/5/light/notfound.png
+Górnik Zabrze,Ekstraklasa,68,62,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+TSV Hartberg,Ö. Bundesliga,67,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Atlético Huila,Liga Dimayor,67,64,61,64,/static/FIFA20/images/crest/5/light/notfound.png
+Burton Albion,EFL League One,67,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Bradford City,EFL League Two,67,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Lillestrøm SK,Eliteserien,66,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+SV Mattersburg,Ö. Bundesliga,66,64,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+FC Thun,RSL,66,64,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Viking FK,Eliteserien,66,64,62,64,/static/FIFA20/images/crest/5/light/notfound.png
+Chongqing SWM,CSL,66,63,58,64,/static/FIFA20/images/crest/5/light/notfound.png
+Mansfield Town,EFL League Two,65,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Colchester,EFL League Two,65,64,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Well. Phoenix,Hyundai A-League,65,63,65,64,/static/FIFA20/images/crest/5/light/111766.webp
+Blackpool,EFL League One,65,63,64,64,/static/FIFA20/images/crest/5/light/1926.webp
+1860 München,3. Liga,65,63,64,64,/static/FIFA20/images/crest/5/light/33.webp
+FK Bodø/Glimt,Eliteserien,65,63,63,64,/static/FIFA20/images/crest/5/light/918.webp
+MK Dons,EFL League One,65,62,65,64,/static/FIFA20/images/crest/5/light/1798.webp
+Shonan Bellmare,Meiji Yasuda J1,65,62,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+IK Sirius,Allsvenskan,64,65,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Rodez AF,Domino’s Ligue 2,64,65,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Duisburg,3. Liga,64,65,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Örebro SK,Allsvenskan,64,65,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+SV Meppen,3. Liga,64,64,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+Coventry City,EFL League One,64,64,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+SKN St. Pölten,Ö. Bundesliga,64,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Plymouth Argyle,EFL League Two,64,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Stabæk Fotball,Eliteserien,64,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Rochdale,EFL League One,64,64,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+SV Waldhof,3. Liga,64,64,62,64,/static/FIFA20/images/crest/5/light/notfound.png
+Preußen Münster,3. Liga,64,63,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+Raków Częstochowa,Ekstraklasa,64,63,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Kristiansund,Eliteserien,64,63,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+AC Horsens,Superliga,64,63,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Damac FC,Saudi Professional League,64,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Sangju Sangmu,K-League 1,64,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Politehnica Iași,Liga României,64,62,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+Adelaide United,Hyundai A-League,63,67,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Randers FC,Superliga,63,66,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+Doncaster,EFL League One,63,66,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Würzburg,3. Liga,63,65,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+Newcastle Jets,Hyundai A-League,63,65,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Tromsø IL,Eliteserien,63,65,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+WSG Tirol,Ö. Bundesliga,63,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Swindon Town,EFL League Two,63,64,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Hobro IK,Superliga,63,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+HJK Helsinki,Rest of World,63,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Livingston,Scottish Prem,62,64,64,64,/static/FIFA20/images/crest/5/light/notfound.png
+Kalmar FF,Allsvenskan,61,65,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Strømsgodset IF,Eliteserien,61,64,65,64,/static/FIFA20/images/crest/5/light/notfound.png
+FK Haugesund,Eliteserien,60,63,63,64,/static/FIFA20/images/crest/5/light/notfound.png
+Al Adalah,Saudi Professional League,67,62,61,63,/static/FIFA20/images/crest/5/light/notfound.png
+Abha Club,Saudi Professional League,66,64,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Beijing Renhe,CSL,66,64,59,63,/static/FIFA20/images/crest/5/light/notfound.png
+Chemnitzer FC,3. Liga,66,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+FC Bayern II,3. Liga,65,64,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Östersunds FK,Allsvenskan,65,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Brisbane Roar,Hyundai A-League,65,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Silkeborg IF,Superliga,65,61,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Scunthorpe Utd,EFL League Two,64,64,64,63,/static/FIFA20/images/crest/5/light/notfound.png
+Viktoria Köln,3. Liga,64,64,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Bristol Rovers,EFL League One,64,64,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+St. Mirren,Scottish Prem,64,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Northampton,EFL League Two,64,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Exeter City,EFL League Two,64,63,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+S. Großaspach,3. Liga,64,62,64,63,/static/FIFA20/images/crest/5/light/notfound.png
+Carl Zeiss Jena,3. Liga,64,62,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Salford City,EFL League Two,63,64,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Chindia,Liga României,63,64,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Ross County,Scottish Prem,63,63,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Accrington,EFL League One,62,65,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Gillingham,EFL League One,62,64,62,63,/static/FIFA20/images/crest/5/light/notfound.png
+Tranmere Rovers,EFL League One,62,63,63,63,/static/FIFA20/images/crest/5/light/notfound.png
+Walsall,EFL League Two,62,62,64,63,/static/FIFA20/images/crest/5/light/1803.webp
+Oldham Athletic,EFL League Two,62,62,63,63,/static/FIFA20/images/crest/5/light/1920.webp
+Seongnam FC,K-League 1,62,62,63,63,/static/FIFA20/images/crest/5/light/981.webp
+Stevenage,EFL League Two,62,61,63,63,/static/FIFA20/images/crest/5/light/361.webp
+Shenzhen Kaisa,CSL,70,61,57,62,/static/FIFA20/images/crest/5/light/111773.webp
+Academica Clinceni,Liga României,64,62,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+AFC Wimbledon,EFL League One,64,62,61,62,/static/FIFA20/images/crest/5/light/notfound.png
+Neuchâtel Xamax,RSL,64,61,63,62,/static/FIFA20/images/crest/5/light/notfound.png
+Lyngby BK,Superliga,62,65,61,62,/static/FIFA20/images/crest/5/light/notfound.png
+Ranheim Fotball,Eliteserien,62,63,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+Falkenbergs FF,Allsvenskan,62,62,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+Newport County,EFL League Two,62,61,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+Shamrock Rovers,SSE Airtricity Lge,61,64,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+Central Coast,Hyundai A-League,61,64,61,62,/static/FIFA20/images/crest/5/light/notfound.png
+Port Vale,EFL League Two,61,62,61,62,/static/FIFA20/images/crest/5/light/notfound.png
+Crawley Town,EFL League Two,60,61,60,62,/static/FIFA20/images/crest/5/light/notfound.png
+Forest Green,EFL League Two,59,62,62,62,/static/FIFA20/images/crest/5/light/notfound.png
+ŁKS Łódź,Ekstraklasa,63,62,59,61,/static/FIFA20/images/crest/5/light/notfound.png
+Cheltenham Town,EFL League Two,63,60,61,61,/static/FIFA20/images/crest/5/light/notfound.png
+Morecambe,EFL League Two,62,62,60,61,/static/FIFA20/images/crest/5/light/notfound.png
+Grimsby Town,EFL League Two,62,60,61,61,/static/FIFA20/images/crest/5/light/notfound.png
+Mjøndalen IF,Eliteserien,61,63,61,61,/static/FIFA20/images/crest/5/light/notfound.png
+Leyton Orient,EFL League Two,61,62,58,61,/static/FIFA20/images/crest/5/light/notfound.png
+Cambridge Utd,EFL League Two,61,61,62,61,/static/FIFA20/images/crest/5/light/notfound.png
+Hamilton,Scottish Prem,61,61,60,61,/static/FIFA20/images/crest/5/light/notfound.png
+AFC Eskilstuna,Allsvenskan,61,61,59,61,/static/FIFA20/images/crest/5/light/notfound.png
+Carlisle United,EFL League Two,60,62,61,61,/static/FIFA20/images/crest/5/light/notfound.png
+St. Pats,SSE Airtricity Lge,60,60,61,61,/static/FIFA20/images/crest/5/light/notfound.png
+Macclesfield,EFL League Two,60,60,60,61,/static/FIFA20/images/crest/5/light/notfound.png
+Crewe Alexandra,EFL League Two,62,61,60,60,/static/FIFA20/images/crest/5/light/notfound.png
+Cork City,SSE Airtricity Lge,59,61,60,60,/static/FIFA20/images/crest/5/light/422.webp
+Bohemian FC,SSE Airtricity Lge,58,60,59,60,/static/FIFA20/images/crest/5/light/305.webp
+Derry City,SSE Airtricity Lge,61,59,59,59,/static/FIFA20/images/crest/5/light/445.webp
+Sligo Rovers,SSE Airtricity Lge,60,58,59,59,/static/FIFA20/images/crest/5/light/563.webp
+Bury,EFL League One,59,59,58,59,/static/FIFA20/images/crest/5/light/1945.webp
+Waterford FC,SSE Airtricity Lge,53,59,56,57,/static/FIFA20/images/crest/5/light/notfound.png
+Finn Harps,SSE Airtricity Lge,56,56,57,56,/static/FIFA20/images/crest/5/light/notfound.png
+UCD AFC,SSE Airtricity Lge,55,54,54,54,/static/FIFA20/images/crest/5/light/notfound.png
+Free Agents,Free Agents,0,0,0,0,/static/FIFA20/images/crest/5/light/notfound.png

@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/fifa20-dashboard/static/css/main.1b0ca3bc.chunk.css",
+    "main.js": "/fifa20-dashboard/static/js/main.5fc4d65e.chunk.js",
+    "main.js.map": "/fifa20-dashboard/static/js/main.5fc4d65e.chunk.js.map",
+    "runtime-main.js": "/fifa20-dashboard/static/js/runtime-main.8fe15821.js",
+    "runtime-main.js.map": "/fifa20-dashboard/static/js/runtime-main.8fe15821.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/fifa20-dashboard/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b50e04d0.chunk.js": "/fifa20-dashboard/static/js/2.b50e04d0.chunk.js",
+    "static/js/2.b50e04d0.chunk.js.map": "/fifa20-dashboard/static/js/2.b50e04d0.chunk.js.map",
+    "index.html": "/fifa20-dashboard/index.html",
+    "precache-manifest.f5f28fce9a21b335db4fc493ef9ccec7.js": "/fifa20-dashboard/precache-manifest.f5f28fce9a21b335db4fc493ef9ccec7.js",
+    "service-worker.js": "/fifa20-dashboard/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/fifa20-dashboard/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.1b0ca3bc.chunk.css.map": "/fifa20-dashboard/static/css/main.1b0ca3bc.chunk.css.map",
+    "static/media/both.png": "/fifa20-dashboard/static/media/both.8671d7e5.png",
+    "static/media/fifa-logo.png": "/fifa20-dashboard/static/media/fifa-logo.d1c8b8c8.png",
+    "static/media/left.png": "/fifa20-dashboard/static/media/left.d3335a9d.png",
+    "static/media/raw.csv": "/fifa20-dashboard/static/media/raw.8f530e46.csv",
+    "static/media/right.png": "/fifa20-dashboard/static/media/right.6a6888d5.png",
+    "static/media/team-league.csv": "/fifa20-dashboard/static/media/team-league.d0b88b1e.csv"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fe15821.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b50e04d0.chunk.js",
+    "static/css/main.1b0ca3bc.chunk.css",
+    "static/js/main.5fc4d65e.chunk.js"
+  ]
+}
